@@ -1,0 +1,343 @@
+// COLORS
+
+// CITRICA SYSTEM COLORS
+$color-white: #fefefe;
+$color-black: #222222;
+
+// LIGHT THEME COLORS
+$color-light-primary: #964f20;
+$color-light-on-primary: #fef6dc;
+$color-light-primary-container: #fef6dc;
+$color-light-on-primary-container: #222222;
+$color-light-primary-fixed: #fef6dc;
+$color-light-on-primary-fixed: #222222;
+$color-light-on-primary-fixed-variant: #964f20;
+$color-light-primary-fixed-dim: #b5a93c;
+
+$color-light-secondary: #8d957e;
+$color-light-on-secondary: #fef6dc;
+$color-light-secondary-container: #cad3d0;
+$color-light-on-secondary-container: #222222;
+$color-light-secondary-fixed: #cad3d0;
+$color-light-on-secondary-fixed: #222222;
+$color-light-on-secondary-fixed-variant: #8d957e;
+$color-light-secondary-fixed-dim: #8d957e;
+
+$color-light-tertiary: #b5a93c;
+$color-light-on-tertiary: #222222;
+$color-light-tertiary-container: #fef6dc;
+$color-light-on-tertiary-container: #222222;
+$color-light-tertiary-fixed: #fef6dc;
+$color-light-on-tertiary-fixed: #222222;
+$color-light-on-tertiary-fixed-variant: #b5a93c;
+$color-light-tertiary-fixed-dim: #b5a93c;
+
+$color-light-quaternary: #cad3d0;
+$color-light-on-quaternary: #222222;
+$color-light-quaternary-container: #cad3d0;
+$color-light-on-quaternary-container: #222222;
+$color-light-quaternary-fixed: #cad3d0;
+$color-light-on-quaternary-fixed: #222222;
+$color-light-on-quaternary-fixed-variant: #8d957e;
+$color-light-quaternary-fixed-dim: #cad3d0;
+
+$color-light-quinary: #fef6dc;
+$color-light-on-quinary: #222222;
+$color-light-quinary-container: #fef6dc;
+$color-light-on-quinary-container: #222222;
+$color-light-quinary-fixed: #fef6dc;
+$color-light-on-quinary-fixed: #222222;
+$color-light-on-quinary-fixed-variant: #b5a93c;
+$color-light-quinary-fixed-dim: #fef6dc;
+
+// SEMANTIC COLORS
+$color-light-error: #D40F36;
+$color-light-on-error: #FFFFFF;
+$color-light-error-container: #FCCFD8;
+$color-light-on-error-container: #30030C;
+
+$color-light-warning: #FAAC0F;
+$color-light-on-warning: #FFFFFF;
+$color-light-warning-container: #FEEECD;
+$color-light-on-warning-container: #322201;
+
+$color-light-success: #94C20A;
+$color-light-on-success: #FFFFFF;
+$color-light-success-container: #F1FCCF;
+$color-light-on-success-container: #253003;
+
+// SURFACE COLORS
+
+$color-light-surface: #fef6dc;
+$color-light-on-surface: #222222;
+$color-light-surface-dim: #cad3d0;
+$color-light-surface-bright: #FFFFFF;
+$color-light-on-surface-var: #222222;
+$color-light-surface-container: #FFFFFF;
+$color-light-surface-container-lowest: #FFFFFF;
+$color-light-surface-container-low: #fef6dc;
+$color-light-surface-container-high: #cad3d0;
+$color-light-surface-container-highest: #8d957e;
+
+$color-light-outline: #8d957e;
+$color-light-outline-variant: #cad3d0;
+
+$color-light-inverse-surface: #222222;
+$color-light-inverse-on-surface: #fef6dc;
+$color-light-inverse-primary: #b5a93c;
+
+
+// DARK THEME COLORS
+
+$color-dark-primary: #b5a93c;
+$color-dark-on-primary: #222222;
+$color-dark-primary-container: #964f20;
+$color-dark-on-primary-container: #fef6dc;
+$color-dark-primary-fixed: #fef6dc;
+$color-dark-on-primary-fixed: #222222;
+$color-dark-on-primary-fixed-variant: #964f20;
+$color-dark-primary-fixed-dim: #b5a93c;
+
+$color-dark-secondary: #cad3d0;
+$color-dark-on-secondary: #222222;
+$color-dark-secondary-container: #8d957e;
+$color-dark-on-secondary-container: #fef6dc;
+$color-dark-secondary-fixed: #cad3d0;
+$color-dark-on-secondary-fixed: #222222;
+$color-dark-on-secondary-fixed-variant: #8d957e;
+$color-dark-secondary-fixed-dim: #cad3d0;
+
+$color-dark-tertiary: #964f20;
+$color-dark-on-tertiary: #fef6dc;
+$color-dark-tertiary-container: #b5a93c;
+$color-dark-on-tertiary-container: #222222;
+$color-dark-tertiary-fixed: #fef6dc;
+$color-dark-on-tertiary-fixed: #222222;
+$color-dark-on-tertiary-fixed-variant: #b5a93c;
+$color-dark-tertiary-fixed-dim: #964f20;
+
+$color-dark-quaternary: #8d957e;
+$color-dark-on-quaternary: #fef6dc;
+$color-dark-quaternary-container: #8d957e;
+$color-dark-on-quaternary-container: #fef6dc;
+$color-dark-quaternary-fixed: #8d957e;
+$color-dark-on-quaternary-fixed: #fef6dc;
+$color-dark-on-quaternary-fixed-variant: #cad3d0;
+$color-dark-quaternary-fixed-dim: #8d957e;
+
+$color-dark-quinary: #222222;
+$color-dark-on-quinary: #fef6dc;
+$color-dark-quinary-container: #222222;
+$color-dark-on-quinary-container: #fef6dc;
+$color-dark-quinary-fixed: #222222;
+$color-dark-on-quinary-fixed: #fef6dc;
+$color-dark-on-quinary-fixed-variant: #964f20;
+$color-dark-quinary-fixed-dim: #222222;
+
+$color-dark-error: #F2B8B5;
+$color-dark-on-error: #601410;
+$color-dark-error-container: #8C1D18;
+$color-dark-on-error-container: #F9DEDC;
+
+$color-dark-warning: #FAE89E;
+$color-dark-on-warning: #614F05;
+$color-dark-warning-container: #917608;
+$color-dark-on-warning-container: #FCF3CF;
+
+$color-dark-success: #C4ECAC;
+$color-dark-on-success: #2B5313;
+$color-dark-success-container: #417D1C;
+$color-dark-on-success-container: #DCF4CD;
+
+$color-dark-surface: #222222;
+$color-dark-on-surface: #fef6dc;
+$color-dark-surface-dim: #222222;
+$color-dark-surface-bright: #8d957e;
+$color-dark-on-surface-var: #fef6dc;
+$color-dark-surface-container: #8d957e;
+$color-dark-surface-container-lowest: #222222;
+$color-dark-surface-container-low: #8d957e;
+$color-dark-surface-container-high: #cad3d0;
+$color-dark-surface-container-highest: #fef6dc;
+
+$color-dark-outline: #cad3d0;
+$color-dark-outline-variant: #8d957e;
+
+$color-dark-inverse-surface: #fef6dc;
+$color-dark-inverse-on-surface: #222222;
+$color-dark-inverse-primary: #964f20;
+
+$color-scrim: #000;
+$color-shadow: #000;
+
+// BUTTON COLORS LIGHT THEME
+$color-light-primary-btn: #964f20;
+$color-light-primary-btn-text: #fef6dc;
+$color-light-primary-btn-hover: #964f20;
+$color-light-primary-btn-text-hover: #fef6dc;
+$color-light-primary-btn-border: #fef6dc;
+$color-light-primary-btn-border-hover: #372b06;
+
+$color-light-secondary-btn: #978C2C;
+$color-light-secondary-btn-text: #581d0d;
+$color-light-secondary-btn-hover: #453f09;
+$color-light-secondary-btn-text-hover: #fef6dc;
+$color-light-secondary-btn-border: #fef6dc;
+$color-light-secondary-btn-border-hover: #745a04;
+
+$color-light-flat-btn: transparent;
+$color-light-flat-btn-text: #964f20;
+$color-light-flat-btn-hover: #05322b;
+$color-light-flat-btn-text-hover: #523cb5;
+$color-light-flat-btn-border: transparent;
+$color-light-flat-btn-border-hover: transparent;
+
+// BUTTON COLORS DARK THEME
+$color-dark-primary-btn: #b5a93c;
+$color-dark-primary-btn-text: #222222;
+$color-dark-primary-btn-hover: #964f20;
+$color-dark-primary-btn-text-hover: #fef6dc;
+$color-dark-primary-btn-border: #222222;
+$color-dark-primary-btn-border-hover: #fef6dc;
+
+$color-dark-secondary-btn: #cad3d0;
+$color-dark-secondary-btn-text: #222222;
+$color-dark-secondary-btn-hover: #552110;
+$color-dark-secondary-btn-text-hover: #fef6dc;
+$color-dark-secondary-btn-border: #222222;
+$color-dark-secondary-btn-border-hover: #fef6dc;
+
+$color-dark-flat-btn: transparent;
+$color-dark-flat-btn-text: #b5a93c;
+$color-dark-flat-btn-hover: #222222;
+$color-dark-flat-btn-text-hover: #fef6dc;
+$color-dark-flat-btn-border: transparent;
+$color-dark-flat-btn-border-hover: transparent;
+
+// INPUT COLORS LIGHT THEME
+$color-light-primary-input-bg: #FFFFFF;
+$color-light-primary-input-border: grey;
+$color-light-primary-input-border-hover: #964f20;
+$color-light-primary-input-label: #222222;
+$color-light-primary-input-text: #222222;
+$color-light-primary-input-text-hover: #222222;
+$color-light-primary-input-placeholder: #8d957e;
+
+$color-light-secondary-input-bg: #cad3d0;
+$color-light-secondary-input-border: #964f20;
+$color-light-secondary-input-border-hover: #964f20;
+$color-light-secondary-input-label: #222222;
+$color-light-secondary-input-text: #222222;
+$color-light-secondary-input-text-hover: #222222;
+$color-light-secondary-input-placeholder: #8d957e;
+
+// INPUT COLORS DARK THEME
+$color-dark-primary-input-bg: #222222;
+$color-dark-primary-input-border: #5a4949;
+$color-dark-primary-input-border-hover: #e9de8e;
+$color-dark-primary-input-label: #fef6dc;
+$color-dark-primary-input-text: #fef6dc;
+$color-dark-primary-input-text-hover: #fef6dc;
+$color-dark-primary-input-placeholder: #8d957e;
+
+$color-dark-secondary-input-bg: #8d957e;
+$color-dark-secondary-input-border: #ffff00;
+$color-dark-secondary-input-border-hover: #cccc00;
+$color-dark-secondary-input-label: #fef6dc;
+$color-dark-secondary-input-text: #fef6dc;
+$color-dark-secondary-input-text-hover: #fef6dc;
+$color-dark-secondary-input-placeholder: #cad3d0;
+
+// SELECT COLORS LIGHT THEME
+$color-light-primary-select-bg: #000;
+$color-light-primary-select-border: grey;
+$color-light-primary-select-border-hover: #964f20;
+$color-light-primary-select-label: #fff;
+$color-light-primary-select-text: #fff;
+$color-light-primary-select-text-hover: rgb(37, 58, 133);
+$color-light-primary-select-placeholder: #8d957e;
+
+$color-light-secondary-select-bg: #cad3d0;
+$color-light-secondary-select-border: #964f20;
+$color-light-secondary-select-border-hover: #964f20;
+$color-light-secondary-select-label: #222222;
+$color-light-secondary-select-text: #222222;
+$color-light-secondary-select-text-hover: #222222;
+$color-light-secondary-select-placeholder: #8d957e;
+
+// SELECT ITEMS COLORS LIGHT THEME
+$color-light-primary-select-item-text: #fff;
+$color-light-primary-select-item-bg: #d4bc67;
+$color-light-primary-select-item-bg-hover: #978C2C;
+$color-light-primary-select-item-bg-selected: #964f20;
+$color-light-primary-select-item-text-selected: #fef6dc;
+
+$color-light-secondary-select-item-text: #222222;
+$color-light-secondary-select-item-bg: #cad3d0;
+$color-light-secondary-select-item-bg-hover: #8d957e;
+$color-light-secondary-select-item-bg-selected: #964f20;
+$color-light-secondary-select-item-text-selected: #fef6dc;
+
+// SELECT COLORS DARK THEME
+$color-dark-primary-select-bg: #222222;
+$color-dark-primary-select-border: #5a4949;
+$color-dark-primary-select-border-hover: #e9de8e;
+$color-dark-primary-select-label: #fef6dc;
+$color-dark-primary-select-text: #fef6dc;
+$color-dark-primary-select-text-hover: #fef6dc;
+$color-dark-primary-select-placeholder: #8d957e;
+
+$color-dark-secondary-select-bg: #8d957e;
+$color-dark-secondary-select-border: #ffff00;
+$color-dark-secondary-select-border-hover: #cccc00;
+$color-dark-secondary-select-label: #fef6dc;
+$color-dark-secondary-select-text: #fef6dc;
+$color-dark-secondary-select-text-hover: #fef6dc;
+$color-dark-secondary-select-placeholder: #cad3d0;
+
+// SELECT ITEMS COLORS DARK THEME
+$color-dark-primary-select-item-text: #fef6dc;
+$color-dark-primary-select-item-bg: #222222;
+$color-dark-primary-select-item-bg-hover: #8d957e;
+$color-dark-primary-select-item-bg-selected: #b5a93c;
+$color-dark-primary-select-item-text-selected: #222222;
+
+$color-dark-secondary-select-item-text: #fef6dc;
+$color-dark-secondary-select-item-bg: #8d957e;
+$color-dark-secondary-select-item-bg-hover: #cad3d0;
+$color-dark-secondary-select-item-bg-selected: #b5a93c;
+$color-dark-secondary-select-item-text-selected: #222222;
+
+// TEXTAREA COLORS LIGHT THEME
+$color-light-primary-textarea-bg: #FFFFFF;
+$color-light-primary-textarea-border: grey;
+$color-light-primary-textarea-border-hover: #964f20;
+$color-light-primary-textarea-label: #222222;
+$color-light-primary-textarea-text: #222222;
+$color-light-primary-textarea-text-hover: #222222;
+$color-light-primary-textarea-placeholder: #8d957e;
+
+$color-light-secondary-textarea-bg: #cad3d0;
+$color-light-secondary-textarea-border: #964f20;
+$color-light-secondary-textarea-border-hover: #964f20;
+$color-light-secondary-textarea-label: #222222;
+$color-light-secondary-textarea-text: #222222;
+$color-light-secondary-textarea-text-hover: #222222;
+$color-light-secondary-textarea-placeholder: #8d957e;
+
+// TEXTAREA COLORS DARK THEME
+$color-dark-primary-textarea-bg: #222222;
+$color-dark-primary-textarea-border: #5a4949;
+$color-dark-primary-textarea-border-hover: #e9de8e;
+$color-dark-primary-textarea-label: #fef6dc;
+$color-dark-primary-textarea-text: #fef6dc;
+$color-dark-primary-textarea-text-hover: #fef6dc;
+$color-dark-primary-textarea-placeholder: #8d957e;
+
+$color-dark-secondary-textarea-bg: #8d957e;
+$color-dark-secondary-textarea-border: #ffff00;
+$color-dark-secondary-textarea-border-hover: #cccc00;
+$color-dark-secondary-textarea-label: #fef6dc;
+$color-dark-secondary-textarea-text: #fef6dc;
+$color-dark-secondary-textarea-text-hover: #fef6dc;
+$color-dark-secondary-textarea-placeholder: #cad3d0;

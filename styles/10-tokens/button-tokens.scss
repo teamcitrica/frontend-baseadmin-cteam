@@ -1,0 +1,58 @@
+
+$btn-citrica-ui: (
+  sm: (
+    padding: 10px 20px,
+  ),
+  md: (
+    padding: 10px 20px,
+  ),
+  lg: (
+    padding: 20px 50px,
+  )
+);
+.btn-citrica-ui{
+  border-radius: var(--form-radius-btn);
+  min-width: 140px;
+  &:hover, &:active, &:focus { // AVOID DEFAULT OPACITY CHANGE
+    opacity: 1 !important;
+    border-color: inherit !important;
+    filter: none !important;
+    transform: none !important;
+    box-shadow: inherit !important;
+  }
+  @include a-set($btn-citrica-ui);
+}
+
+.btn-primary{
+  background-color: var(--color-primary-btn);
+  color: var(--color-primary-btn-text);
+  border: none;
+  &:hover{
+    background-color: var(--color-primary-btn-hover);
+    .text-component {
+      color: var(--color-primary-btn-text-hover) !important;
+    }
+  }
+}
+.btn-secondary{
+  background-color: var(--color-secondary-btn);
+  color: var(--color-secondary-btn-text);
+  border: none;
+  &:hover{
+    background-color: var(--color-secondary-btn-hover);
+    .text-component {
+      color: var(--color-secondary-btn-text-hover) !important;
+    }
+  }
+}
+.btn-flat{
+  background-color: transparent;
+  color: var(--color-flat-btn-text);
+  border: none;
+  &:hover{
+    background-color: var(--color-flat-btn-hover);
+    .text-component {
+      color: var(--color-flat-btn-text-hover) !important;
+    }
+  }
+}

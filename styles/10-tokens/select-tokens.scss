@@ -1,0 +1,319 @@
+
+$select-citrica-ui: (
+  sm: (
+    padding: 10px 20px,
+  ),
+  md: (
+    padding: 10px 20px,
+  ),
+  lg: (
+    padding: 20px 50px,
+  )
+);
+
+.select-citrica-ui{
+  min-width: 140px !important;
+  max-width: 380px !important;
+  @include a-set($select-citrica-ui);
+  
+  &[data-slot="base"] {
+    min-width: 140px !important;
+    max-width: 380px !important;
+  }
+  
+  [data-slot="trigger"] {
+    min-width: 140px !important;
+    max-width: 380px !important;
+  }
+  
+  [data-slot="mainWrapper"] {
+    min-width: 140px !important;
+    max-width: 380px !important;
+  }
+}
+.select-item-citrica-ui{
+  border-radius: var(--form-radius-select); // border radius
+}
+
+.select-primary.select-citrica-ui {
+  [data-slot="trigger"] {
+    background-color: var(--color-primary-input-bg);
+    border: var(--form-border-size-select) solid var(--color-primary-input-border);
+    border-radius: var(--form-radius-select);
+    
+    &:hover {
+      border-color: var(--color-primary-select-border-hover) !important;
+    }
+    
+    &[data-focus="true"] {
+      border-color: var(--color-primary-select-border-hover) !important;
+    }
+  }
+  
+  [data-slot="label"] {
+    color: var(--color-primary-input-label) !important;
+  }
+  
+  [data-slot="value"] {
+    color: var(--color-primary-input-text) !important;
+    &::placeholder {
+      color: var(--color-primary-select-placeholder) !important;
+    }
+    
+    &:hover {
+      color: var(--color-primary-select-text-hover) !important;
+    }
+    
+    /* Placeholder cuando no hay valor seleccionado */
+    &[data-placeholder="true"] {
+      color: var(--color-primary-select-placeholder) !important;
+    }
+    
+    /* Estado vacío */
+    &:empty {
+      color: var(--color-primary-select-placeholder) !important;
+    }
+  }
+  
+  /* Placeholder text directo */
+  [data-slot="placeholder"] {
+    color: var(--color-primary-select-placeholder) !important;
+  }
+  
+  /* SelectItems - Selectores agresivos para capturar todos los elementos */
+  [data-slot="listbox"] [data-slot="option"],
+  [data-slot="listbox"] li,
+  [data-slot="listbox"] > *,
+  .select-item,
+  [role="option"],
+  li[data-key],
+  /* Selectores más específicos */
+  [data-slot="listbox"] [data-slot="option"] *,
+  [data-slot="popover"] [data-slot="option"],
+  [data-slot="popover"] li,
+  /* Selector universal para cualquier elemento dentro del listbox */
+  &[data-slot="listbox"] *,
+  /* Selector de último recurso */
+  & [data-slot="listbox"] * {
+    color: var(--color-primary-select-item-text) !important;
+    background-color: var(--color-primary-select-item-bg) !important;
+    
+    &[data-hover="true"],
+    &:hover,
+    &.hover {
+      background-color: var(--color-primary-select-item-bg-hover) !important;
+      color: var(--color-primary-select-item-text) !important;
+    }
+    
+    &[data-selected="true"],
+    &[aria-selected="true"],
+    &.is-selected,
+    &.selected {
+      background-color: var(--color-primary-select-item-bg-selected) !important;
+      color: var(--color-primary-select-item-text-selected) !important;
+    }
+  }
+  
+  /* Selector global de emergencia para el dropdown */
+  .select-primary ~ [data-slot="popover"] *,
+  .select-primary + * [data-slot="option"],
+  body [data-slot="popover"] [role="option"] {
+    color: var(--color-primary-select-item-text) !important;
+    background-color: var(--color-primary-select-item-bg) !important;
+    
+    &:hover {
+      background-color: var(--color-primary-select-item-bg-hover) !important;
+    }
+    
+    &[aria-selected="true"] {
+      background-color: var(--color-primary-select-item-bg-selected) !important;
+    }
+  }
+}
+
+.select-secondary.select-citrica-ui {
+  [data-slot="trigger"] {
+    background-color: var(--color-secondary-select-bg) !important;
+    border: 1px solid var(--color-secondary-select-border) !important;
+    
+    &:hover {
+      border-color: var(--color-secondary-select-border-hover) !important;
+    }
+    
+    &[data-focus="true"] {
+      border-color: var(--color-secondary-select-border-hover) !important;
+    }
+  }
+  
+  [data-slot="label"] {
+    color: var(--color-secondary-select-label) !important;
+  }
+  
+  [data-slot="value"] {
+    color: var(--color-secondary-select-text) !important;
+    
+    &::placeholder {
+      color: var(--color-secondary-select-placeholder) !important;
+    }
+    
+    &:hover {
+      color: var(--color-secondary-select-text-hover) !important;
+    }
+    
+    /* Placeholder cuando no hay valor seleccionado */
+    &[data-placeholder="true"] {
+      color: var(--color-secondary-select-placeholder) !important;
+    }
+    
+    /* Estado vacío */
+    &:empty {
+      color: var(--color-secondary-select-placeholder) !important;
+    }
+  }
+  
+  /* Placeholder text directo */
+  [data-slot="placeholder"] {
+    color: var(--color-secondary-select-placeholder) !important;
+  }
+  
+  /* SelectItems - Selectores agresivos para capturar todos los elementos */
+  [data-slot="listbox"] [data-slot="option"],
+  [data-slot="listbox"] li,
+  [data-slot="listbox"] > *,
+  .select-item,
+  [role="option"],
+  li[data-key],
+  /* Selectores más específicos */
+  [data-slot="listbox"] [data-slot="option"] *,
+  [data-slot="popover"] [data-slot="option"],
+  [data-slot="popover"] li,
+  /* Selector universal para cualquier elemento dentro del listbox */
+  &[data-slot="listbox"] *,
+  /* Selector de último recurso */
+  & [data-slot="listbox"] * {
+    color: var(--color-secondary-select-item-text) !important;
+    background-color: var(--color-secondary-select-item-bg) !important;
+    
+    &[data-hover="true"],
+    &:hover,
+    &.hover {
+      background-color: var(--color-secondary-select-item-bg-hover) !important;
+      color: var(--color-secondary-select-item-text) !important;
+    }
+    
+    &[data-selected="true"],
+    &[aria-selected="true"],
+    &.is-selected,
+    &.selected {
+      background-color: var(--color-secondary-select-item-bg-selected) !important;
+      color: var(--color-secondary-select-item-text-selected) !important;
+    }
+  }
+  
+  /* Selector global de emergencia para el dropdown */
+  .select-secondary ~ [data-slot="popover"] *,
+  .select-secondary + * [data-slot="option"],
+  body [data-slot="popover"] [role="option"] {
+    color: var(--color-secondary-select-item-text) !important;
+    background-color: var(--color-secondary-select-item-bg) !important;
+    
+    &:hover {
+      background-color: var(--color-secondary-select-item-bg-hover) !important;
+    }
+    
+    &[aria-selected="true"] {
+      background-color: var(--color-secondary-select-item-bg-selected) !important;
+      color: var(--color-secondary-select-item-text-selected) !important;
+    }
+  }
+}
+
+// =====================================
+// SELECTORES GLOBALES DE FUERZA BRUTA
+// =====================================
+
+/* Capturar TODOS los elementos de dropdown de HeroUI */
+[data-slot="popover"],
+[role="listbox"],
+.popover,
+.dropdown,
+[data-slot="listbox"] {
+  
+  /* Estilos para PRIMARY select items */
+  .select-primary ~ & *,
+  .select-primary + * &,
+  .select-primary.select-citrica-ui ~ & * {
+    color: var(--color-primary-select-item-text) !important;
+    background-color: var(--color-primary-select-item-bg) !important;
+    
+    &:hover,
+    &[data-hover="true"] {
+      background-color: var(--color-primary-select-item-bg-hover) !important;
+    }
+    
+    &[aria-selected="true"],
+    &[data-selected="true"] {
+      background-color: var(--color-primary-select-item-bg-selected) !important;
+      color: var(--color-primary-select-item-text-selected) !important;
+    }
+  }
+  
+  /* Estilos para SECONDARY select items */
+  .select-secondary ~ & *,
+  .select-secondary + * &,
+  .select-secondary.select-citrica-ui ~ & * {
+    color: var(--color-secondary-select-item-text) !important;
+    background-color: var(--color-secondary-select-item-bg) !important;
+    
+    &:hover,
+    &[data-hover="true"] {
+      background-color: var(--color-secondary-select-item-bg-hover) !important;
+    }
+    
+    &[aria-selected="true"],
+    &[data-selected="true"] {
+      background-color: var(--color-secondary-select-item-bg-selected) !important;
+      color: var(--color-secondary-select-item-text-selected) !important;
+    }
+  }
+}
+
+/* Selector nuclear - aplica a CUALQUIER elemento que pueda ser un select item */
+[data-key],
+[role="option"],
+li[tabindex],
+[data-slot="option"],
+.select-item,
+[aria-selected],
+[data-selectable="true"] {
+  
+  /* Si está cerca de un select secondary */
+  body:has(.select-secondary) & {
+    color: var(--color-secondary-select-item-text) !important;
+    background-color: var(--color-secondary-select-item-bg) !important;
+    
+    &:hover {
+      background-color: var(--color-secondary-select-item-bg-hover) !important;
+    }
+    
+    &[aria-selected="true"] {
+      background-color: var(--color-secondary-select-item-bg-selected) !important;
+      color: var(--color-secondary-select-item-text-selected) !important;
+    }
+  }
+  
+  /* Si está cerca de un select primary */
+  body:has(.select-primary) & {
+    color: var(--color-primary-select-item-text) !important;
+    background-color: var(--color-primary-select-item-bg) !important;
+    
+    &:hover {
+      background-color: var(--color-primary-select-item-bg-hover) !important;
+    }
+    
+    &[aria-selected="true"] {
+      background-color: var(--color-primary-select-item-bg-selected) !important;
+      color: var(--color-primary-select-item-text-selected) !important;
+    }
+  }
+}

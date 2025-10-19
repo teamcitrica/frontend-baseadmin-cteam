@@ -1,0 +1,80 @@
+$textarea-citrica-ui: (
+  sm: (
+    padding: 10px 20px,
+  ),
+  md: (
+    padding: 10px 20px,
+  ),
+  lg: (
+    padding: 20px 50px,
+  )
+);
+
+.textarea-citrica-ui{
+  min-width: 140px;
+  max-width: 380px;
+  @include a-set($textarea-citrica-ui);
+  
+  [data-slot="input-wrapper"] {
+    border-radius: var(--form-radius-textarea);
+  }
+}
+
+// SELECTED TEXTAREA BORDER COLOR WHEN FOCUSED
+.group[data-focus="true"] .group-data-\[focus\=true\]\:border-default-foreground {
+  border-color: var(--color-primary-textarea-border-hover) !important;
+}
+
+.textarea-primary{
+  [data-slot="input-wrapper"] {
+    background-color: var(--color-primary-textarea-bg);
+    border: var(--form-border-size-textarea) solid var(--color-primary-textarea-border);
+    
+    &:hover {
+      border-color: var(--color-primary-textarea-border-hover);
+    }
+    
+    &[data-focus="true"] {
+      border-color: var(--color-primary-textarea-border-hover);
+    }
+  }
+  
+  [data-slot="label"] {
+    color: var(--color-primary-textarea-label);
+  }
+  
+  [data-slot="input"] {
+    color: var(--color-primary-textarea-text-hover);
+    
+    &::placeholder {
+      color: var(--color-primary-textarea-placeholder);
+    }
+  }
+}
+
+.textarea-secondary{
+  [data-slot="input-wrapper"] {
+    background-color: var(--color-secondary-textarea-bg);
+    border: 1px solid var(--color-secondary-textarea-border);
+    
+    &:hover {
+      border-color: var(--color-secondary-textarea-border-hover);
+    }
+    
+    &[data-focus="true"] {
+      border-color: var(--color-secondary-textarea-border-hover);
+    }
+  }
+  
+  [data-slot="label"] {
+    color: var(--color-secondary-textarea-label);
+  }
+  
+  [data-slot="input"] {
+    color: var(--color-secondary-textarea-text-hover);
+    
+    &::placeholder {
+      color: var(--color-secondary-textarea-placeholder);
+    }
+  }
+}
