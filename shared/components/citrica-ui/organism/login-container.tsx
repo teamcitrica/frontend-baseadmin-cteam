@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import Text from '@ui/atoms/text'
 import Input from '@ui/atoms/input'
 import { addToast } from "@heroui/toast"
-import { UserAuth } from '@/shared/context/auth-context'
+import { UserAuth } from '@/app/context/auth-context'
 import { useForm } from "react-hook-form";
 import { Divider, Link } from "@heroui/react";
 import { Eye } from "lucide-react";

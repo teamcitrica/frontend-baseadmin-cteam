@@ -1,8 +1,14 @@
-'use client';
-import React from 'react';
-import { Input as HeroInput } from '@heroui/react';
-import clsx from 'clsx';
-import Icon, { IconName } from './icon';
+"use client";
+import React, { forwardRef } from "react";
+import { Input as HeroInput } from "@heroui/react";
+import clsx from "clsx";
+
+import Icon, { IconName } from "./icon";
+
+type ValidationRule = {
+  test: (value: string) => boolean;
+  message: string;
+};
 
 interface InputProps {
   label?: string;
@@ -12,11 +18,33 @@ interface InputProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onValueChange?: (value: string) => void;
   name?: string;
-  type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search';
-  variant?: 'primary' | 'secondary' | 'flat' | 'bordered' | 'faded' | 'underlined';
-  color?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
-  radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
+  type?:
+    | "text"
+    | "email"
+    | "password"
+    | "number"
+    | "tel"
+    | "url"
+    | "search"
+    | "date"
+    | "datetime-local"
+    | "time";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "flat"
+    | "bordered"
+    | "faded"
+    | "underlined";
+  color?:
+    | "default"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "warning"
+    | "danger";
+  size?: "sm" | "md" | "lg";
+  radius?: "none" | "sm" | "md" | "lg" | "full";
   required?: boolean;
   disabled?: boolean;
   readOnly?: boolean;
@@ -49,9 +77,24 @@ interface InputProps {
   step?: string | number;
   min?: string | number;
   max?: string | number;
+  // Validación automática
+  autoValidate?: boolean;
+  validationRules?: ValidationRule[];
+  validateOnBlur?: boolean;
+  validateOnChange?: boolean;
+  // Estados de carga
+  loading?: boolean;
+  // Callback de validación
+  onValidationChange?: (isValid: boolean, errors: string[]) => void;
+  // Soporte para react-hook-form
+  register?: any;
+  errors?: any;
+  // Helpers de texto
+  helperText?: string;
+  showCharacterCount?: boolean;
 }
 
-const Input = ({
+const Input = forwardRef<HTMLInputElement, InputProps>(({
   label,
   placeholder,
   value,
@@ -59,11 +102,11 @@ const Input = ({
   onChange,
   onValueChange,
   name,
-  type = 'text',
-  variant = 'primary',
-  color = 'default',
-  size = 'md',
-  radius = 'md',
+  type = "text",
+  variant = "primary",
+  color = "default",
+  size = "md",
+  radius = "md",
   required = false,
   disabled = false,
   readOnly = false,
@@ -88,15 +131,19 @@ const Input = ({
   step,
   min,
   max,
-}: InputProps) => {
+}, ref) => {
   // Create icon content if icons are provided
   const startIconContent = startIcon ? (
-    <Icon name={startIcon} size={iconSize} color={iconColor} />
-  ) : startContent;
+    <Icon color={iconColor} name={startIcon} size={iconSize} />
+  ) : (
+    startContent
+  );
 
   const endIconContent = endIcon ? (
-    <Icon name={endIcon} size={iconSize} color={iconColor} />
-  ) : endContent;
+    <Icon color={iconColor} name={endIcon} size={iconSize} />
+  ) : (
+    endContent
+  );
 
   const getInputClassByVariant = (variant: string) => {
     switch (variant) {
@@ -113,50 +160,55 @@ const Input = ({
     }
   };
 
-  const shouldUseCustomVariant = variant === 'primary' || variant === 'secondary';
-  const heroVariant = shouldUseCustomVariant ? 'bordered' : variant;
+  const shouldUseCustomVariant =
+    variant === "primary" || variant === "secondary";
+  const heroVariant = shouldUseCustomVariant ? "bordered" : variant;
 
   return (
     <HeroInput
-      label={label}
-      placeholder={placeholder}
-      value={value}
-      defaultValue={defaultValue}
-      onChange={onChange}
-      onValueChange={onValueChange}
-      name={name}
-      type={type}
-      variant={heroVariant}
-      color={'default'}
-      size={size}
-      radius={radius}
-      isRequired={required}
-      isDisabled={disabled}
-      isReadOnly={readOnly}
-      isInvalid={isInvalid}
-      errorMessage={errorMessage}
-      description={description}
+      ref={ref}
+      autoComplete={autoComplete}
+      autoFocus={autoFocus}
       className={clsx(
         "input-citrica-ui",
         getInputClassByVariant(variant),
-        className
+        className,
       )}
       classNames={classNames}
-      startContent={startIconContent}
+      color={"default"}
+      defaultValue={defaultValue}
+      description={description}
       endContent={endIconContent}
+      errorMessage={errorMessage}
       fullWidth={fullWidth}
       isClearable={clearable}
-      autoFocus={autoFocus}
-      autoComplete={autoComplete}
-      maxLength={maxLength}
-      minLength={minLength}
-      pattern={pattern}
-      step={step}
-      min={min}
+      isDisabled={disabled}
+      isInvalid={isInvalid}
+      isReadOnly={readOnly}
+      isRequired={required}
+      label={label}
       max={max}
+      maxLength={maxLength}
+      min={min}
+      minLength={minLength}
+      name={name}
+      pattern={pattern}
+      placeholder={placeholder}
+      radius={radius}
+      size={size}
+      startContent={startIconContent}
+      step={step}
+      type={type}
+      value={value}
+      variant={heroVariant}
+      onChange={onChange}
+      onValueChange={onValueChange}
     />
   );
-};
+});
+
+// Agregar displayName para debugging
+Input.displayName = 'Input';
 
 export default Input;
 export type { InputProps };
