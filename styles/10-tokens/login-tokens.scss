@@ -1,0 +1,36 @@
+$container-inputs : (sm: (padding: 0px 8px,
+  ),
+  md: (padding: 0px px,
+  ),
+  lg: (padding: 0px 0px,
+  ));
+
+.container-inputs {
+  width: 100%;
+  max-width: 484px;
+  height: 473px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E9E8DD;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: 8px 8px 24px rgba(102, 102, 102, 0.3);
+  background: #FFFFFF;
+  @include a-set($container-inputs );
+}
+
+.bg-login {
+  background: url('/img/shot1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-width: 484px;
+  height: 473px;
+  border: 1px solid #E9E8DD;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 8px 8px 24px rgba(102, 102, 102, 0.3);
+}

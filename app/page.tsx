@@ -4,6 +4,8 @@ import SectionSkeleton from "./home/components/section-skeleton";
 import { Header, Text } from "@citrica-ui";
 import useHomeHooks from "./home/hooks/hooks-home";
 import FormComponentsExample from "@/shared/components/examples/form-components-example";
+import { Col } from "@/styles/07-objects/objects";
+import QuoteForm from "@/shared/project-components/quote-form";
 
 export const dynamic = 'force-dynamic'
 
@@ -42,6 +44,9 @@ export default function Home() {
         <SectionTypography />
         <SectionSkeleton />
       </section>
+                <Col cols={{ lg: 6, md: 3, sm: 4 }}>
+            <QuoteForm />
+          </Col>
     </>
   );
 }

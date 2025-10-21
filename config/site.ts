@@ -39,28 +39,28 @@ export const siteConfig = {
 			icon: "Settings",
 			href: "/",
 		},
+    {
+      title: "Clientes",
+      icon: "Users",
+      href: "/admin/clientes",
+    },
 		{
-			title: "Tareas",
-			icon: "ClipboardCheck",
-			href: "/panel/tareas",
-		},
-		{
-			title: "Configuración de la app",
+			title: "Reservas",
 			icon: "Settings",
-			href: "/panel/config-app", // ONLY TO DETERMINE ACTIVE, IS NOT LINKING
+			href: "/admin/reservas", // ONLY TO DETERMINE ACTIVE, IS NOT LINKING
 			subItems: [
-				{
-					title: "Básica",
-					href: "/panel/config-app?" + SUBITEM_SEARCH_PARAM + "=basic",
-				},
-				{
-					title: "Avanzada",
-					href: "/panel/config-app?" + SUBITEM_SEARCH_PARAM + "=advanced",
-				},
-				{
-					title: "Mejorada",
-					href: "/panel/config-app?" + SUBITEM_SEARCH_PARAM + "=best",
-				},
+        {
+          title: "Ver Reservas",
+          href: "/admin/reservas?" + SUBITEM_SEARCH_PARAM + "=lista",
+        },
+        {
+          title: "Calendario",
+          href: "/admin/reservas?" + SUBITEM_SEARCH_PARAM + "=calendario",
+        },
+        {
+          title: "Gestión de Disponibilidad",
+          href: "/admin/reservas?" + SUBITEM_SEARCH_PARAM + "=disponibilidad",
+        },
 			],
 		},
 		{
