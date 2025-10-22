@@ -163,7 +163,9 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
   const shouldUseCustomVariant =
     variant === "primary" || variant === "secondary";
   const heroVariant = shouldUseCustomVariant ? "bordered" : variant;
+   
 
+  
   return (
     <HeroInput
       ref={ref}
