@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Container, Col } from "@citrica/objects";
 import Text from "@ui/atoms/text";
@@ -16,8 +16,8 @@ import BookingStatsView from "./components/booking-stats-view";
 import BookingAvailabilityView from "./components/booking-availability-view";
 import { formatTimeSlotsWithDuration } from "@/shared/utils/timeSlotHelpers";
 
-
-const ReservasAdminPage = () => {
+// Componente interno que usa useSearchParams
+const ReservasContent = () => {
   const searchParams = useSearchParams();
   const activeTab = searchParams?.get("page") || "lista";
 
@@ -631,6 +631,15 @@ const ReservasAdminPage = () => {
         </Text>
       </Modal>
     </>
+  );
+};
+
+// Componente principal envuelto en Suspense
+const ReservasAdminPage = () => {
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <ReservasContent />
+    </Suspense>
   );
 };
 

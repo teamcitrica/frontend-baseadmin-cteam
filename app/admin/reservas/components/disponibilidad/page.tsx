@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Container, Col } from "@citrica/objects";
 import Text from "@ui/atoms/text";
@@ -9,7 +9,8 @@ import Button from "@ui/molecules/button";
 import WeeklyScheduleManager from "./components/weekly-schedule-manager";
 import UnifiedAvailabilityManager from "./components/unified-availability-manager";
 
-const DisponibilidadAdminPage = () => {
+// Componente interno que usa useSearchParams
+const DisponibilidadContent = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const activeTab = searchParams?.get("page") || "disponibilidad";
@@ -78,6 +79,15 @@ const DisponibilidadAdminPage = () => {
         {renderContent()}
       </Col>
     </Container>
+  );
+};
+
+// Componente principal envuelto en Suspense
+const DisponibilidadAdminPage = () => {
+  return (
+    <Suspense fallback={<div>Cargando...</div>}>
+      <DisponibilidadContent />
+    </Suspense>
   );
 };
 
