@@ -4,11 +4,8 @@ import { useRouter } from "next/navigation";
 import { Sidebar } from "@/shared/components/citrica-ui/organism/sidebar";
 import { siteConfig } from "@/config/site";
 import { UserAuth } from "@/shared/context/auth-context";
-
-import "@/styles/globals.scss";
 import Navbar from "@/shared/components/citrica-ui/organism/navbar";
-
-
+import "@/styles/globals.scss";
 
 export default function PanelLayout({
   children,
@@ -29,8 +26,7 @@ export default function PanelLayout({
   if (userSession === null || userInfo === null) {
     return null;
   }
-    console.log("quiero ver que me esta mandado aqui",userSession);
-        console.log("revisame esta",userInfo);
+console.log(userSession, "datos session")
   return (
     <div className="container-general-pase-admin w-full flex justify-center">
       <div className="w-full">
