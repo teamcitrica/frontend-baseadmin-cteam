@@ -4,8 +4,11 @@ import { useRouter } from "next/navigation";
 import { Sidebar } from "@/shared/components/citrica-ui/organism/sidebar";
 import { siteConfig } from "@/config/site";
 import { UserAuth } from "@/shared/context/auth-context";
+
 import "@/styles/globals.scss";
-import Navbar from "@/shared/components/citrica-ui/organism/navbar copy";
+import Navbar from "@/shared/components/citrica-ui/organism/navbar";
+
+
 
 export default function PanelLayout({
   children,
@@ -26,7 +29,8 @@ export default function PanelLayout({
   if (userSession === null || userInfo === null) {
     return null;
   }
-
+    console.log("quiero ver que me esta mandado aqui",userSession);
+        console.log("revisame esta",userInfo);
   return (
     <div className="container-general-pase-admin w-full flex justify-center">
       <div className="w-full">
