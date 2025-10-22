@@ -1,4 +1,8 @@
 "use client";
+
+// Deshabilitar prerenderizado estático - necesario para useSearchParams()
+export const dynamic = "force-dynamic";
+
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Container, Col } from "@citrica/objects";
