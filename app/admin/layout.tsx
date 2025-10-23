@@ -12,21 +12,26 @@ export default function PanelLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { userSession, userInfo } = UserAuth();
+  const { userSession, userInfo, loading } = UserAuth();
   const router = useRouter();
 
   useEffect(() => {
-    // Si no hay sesión, redirigir a login
-    if (userSession === null) {
+    // Solo redirigir si no está cargando y no hay sesión
+    if (!loading && userSession === null) {
       router.push('/login');
     }
-  }, [userSession, router]);
+  }, [userSession, loading, router]);
 
-  // Si no hay sesión, no renderizar nada (se está redirigiendo)
+  // Mostrar loading mientras se verifica la sesión
+  if (loading) {
+    return null;
+  }
+
+  // Si no hay sesión después de cargar, no renderizar (se está redirigiendo)
   if (userSession === null || userInfo === null) {
     return null;
   }
-console.log(userSession, "datos session")
+
   return (
     <div className="container-general-pase-admin w-full flex justify-center">
       <div className="w-full">

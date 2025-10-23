@@ -3,19 +3,23 @@ import React, { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Container } from '@citrica/objects'
 import { UserAuth } from '@/shared/context/auth-context'
-import LoginContainer from '@/shared/components/citrica-ui/organism/login-container'
-
+import LoginContainer from '@/shared/components/citrica-ui/organism/login-container';
 
 const LoginPage = () => {
-  const { userSession } = UserAuth();
+  const { userSession, loading } = UserAuth();
   const router = useRouter();
 
   // Redirigir a admin si ya está autenticado
   useEffect(() => {
-    if (userSession) {
+    if (!loading && userSession) {
       router.push('/admin');
     }
-  }, [userSession, router]);
+  }, [userSession, loading, router]);
+
+  // Mostrar loading mientras se verifica
+  if (loading) {
+    return null;
+  }
 
   // Si ya hay sesión, no mostrar el formulario (se redirigirá)
   if (userSession) {

@@ -38,6 +38,7 @@ interface AuthValue {
     is_switchable?: boolean;
   } | null;
   changeRole: (v: number) => void;
+  loading: boolean;
 }
 
 const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -61,6 +62,7 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
   const { supabase } = useSupabase();
   const [userSession, setUserSession] = useState<Session | null>(null);
   const [userInfo, setUserInfo] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   const changeRole = (newrole: number) => {
     const newUser = {
@@ -208,6 +210,16 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
   // useEffect para suscribirse a los cambios de autenticación
   useEffect(() => {
     console.log("CHECO USER x");
+
+    // Verificar sesión existente al cargar
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) {
+        setUserSession(session);
+        getUserInfo(session.user.id);
+      }
+      setLoading(false);
+    });
+
     const { data: authListener } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         console.log("SUPA BASE evento", event);
@@ -219,6 +231,7 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
           setUserSession(null);
           setUserInfo(null);
         }
+        setLoading(false);
       },
     );
 
@@ -237,6 +250,7 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
         signOut,
         userSession,
         changeRole,
+        loading,
       }}
     >
       {children}
