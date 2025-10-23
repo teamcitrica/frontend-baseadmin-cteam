@@ -23,10 +23,10 @@ $display-responsive: (
   text-transform: none;
   @include a-set($display-responsive);
   &-bold{
-    font-weight: 300;
+    font-weight: 700;
   }
   &-light{
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
@@ -54,10 +54,10 @@ $headline-responsive: (
   text-transform: none;
   @include a-set($headline-responsive);
   &-bold{
-    font-weight: 300;
+    font-weight: 700;
   }
   &-light{
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
@@ -85,10 +85,10 @@ $body-big-responsive: (
   text-transform: none;
   @include a-set($body-big-responsive);
   &-bold{
-    font-weight: 300;
+    font-weight: 700;
   }
   &-light{
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
@@ -115,10 +115,10 @@ $title-responsive: (
   text-transform: none;
   @include a-set($title-responsive);
   &-bold{
-    font-weight: 300;
+    font-weight: 700;
   }
   &-light{
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
@@ -146,10 +146,10 @@ $subtitle-responsive: (
   text-transform: none;
   @include a-set($subtitle-responsive);
   &-bold{
-    font-weight: 300;
+    font-weight: 700;
   }
   &-light{
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
@@ -176,10 +176,10 @@ $body-responsive: (
   text-transform: none;
   @include a-set($body-responsive);
   &-bold{
-    font-weight: 300;
+    font-weight: 700;
   }
   &-light{
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
@@ -206,10 +206,10 @@ $label-responsive: (
   text-transform: none;
   @include a-set($label-responsive);
   &-bold{
-    font-weight: 300;
+    font-weight: 700;
   }
   &-light{
-    font-weight: 700;
+    font-weight: 300;
   }
 }
 
