@@ -79,7 +79,7 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ logoSrc, backgroundImag
           <h2>BIENVENIDO</h2>
         </Text>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className='flex flex-col gap-0'>
+          <div className='flex flex-col gap-5 my-4'>
             <Input
               type="email"
               placeholder="Email"
@@ -114,7 +114,7 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ logoSrc, backgroundImag
         </form>
 
         <div className="w-[312px] h-[94px] mt-4 flex flex-col justify-center items-center">
-          <Divider className="w-[210px] h-[1px] bg-[#E5E7EB] mt-[14px] mb-2"></Divider>
+          <Divider className="max-w-[380px] h-[1px] bg-[#E5E7EB] mt-[14px] mb-2"></Divider>
           <Link href="/forgot-password">
             <Text variant="body">
               ¿Olvidaste tu contraseña?

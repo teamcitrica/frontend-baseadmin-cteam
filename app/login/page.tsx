@@ -29,7 +29,7 @@ const LoginPage = () => {
   return (
     <Container className='flex justify-center items-center h-screen'>
       <LoginContainer
-        logoSrc="/img/logo-lienzo.svg"
+        logoSrc="/img/citrica-logo.png"
         backgroundImage=""
       />
     </Container>

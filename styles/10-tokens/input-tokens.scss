@@ -1,20 +1,20 @@
 
-$input-citrica-ui: (
-  sm: (
-    padding: 10px 20px,
-  ),
-  md: (
-    padding: 10px 20px,
-  ),
-  lg: (
-    padding: 20px 50px,
-  )
-);
+// $input-citrica-ui: (
+//   sm: (
+//     padding: 10px 20px,
+//   ),
+//   md: (
+//     padding: 10px 20px,
+//   ),
+//   lg: (
+//     padding: 20px 50px,
+//   )
+// );
 
 .input-citrica-ui{
   min-width: 140px;
   max-width: 380px;
-  @include a-set($input-citrica-ui);
+  // @include a-set($input-citrica-ui);
   
   [data-slot="input-wrapper"] {
     border-radius: var(--form-radius-input);

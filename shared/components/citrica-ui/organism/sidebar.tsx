@@ -78,7 +78,7 @@ export function Sidebar({ items }: SidebarProps) {
             <Text variant="label" color="white" className="font-bold text-sm">L</Text>
           </div>
         ) : (
-          <img src="/img/logo-lienzo.svg" alt="Lienzo Logo" className="m-4 h-10 w-auto" />
+          <img src="/img/citrica-logo.png" alt="Citrica Logo" className="m-4 h-10 w-auto" />
         )}
       </div>
       {items.map((item) => (
