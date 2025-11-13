@@ -6,6 +6,7 @@ import Input from "../atoms/input";
 import { Divider, Link } from "@heroui/react";
 import Button from '../molecules/button';
 import Modal from '../molecules/modal';
+import Icon from '../atoms/icon';
 
 const ForgotPasswordPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,28 +31,28 @@ const ForgotPasswordPage = () => {
         <img className='w-[80px] pb-3 items-center' src="/img/citrica-logo.png" alt="Logo" />
         <h2 className='mb-4'>
           <Text variant='body' weight='bold'>
-            ¿Tienes problemas para iniciar sesión?
+            ¿No puedes iniciar sesión?
           </Text>
         </h2>
-        <p className='mb-6'>
+        <p className='mb-4'>
           <Text variant='label' className="text-forgot-password">
-            Ingresa tu correo para recuperar tu contraseña
+            Escribe tu correo para recuperar el acceso.
           </Text>
         </p>
-        <form className='flex flex-col justify-center mb-4' onSubmit={handleSubmit}>
+        <form className='flex flex-col justify-center' onSubmit={handleSubmit}>
           <Input
             type="email"
             placeholder="Correo electrónico"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            description='Te enviaremos un enlace para restablecer tu contraseña.'
-            className='mb-3'
+            description='Te enviaremos un enlace para restablecerla.'
+            className='mb-2'
           />
           <Button 
             type="submit"
             variant='primary'
-            label={isLoading ? 'Enviando...' : 'Enviar enlace de recuperación'}
+            label={isLoading ? 'Enviando...' : 'Enviar enlace'}
             disabled={isLoading}
           />
         </form>
@@ -59,8 +60,8 @@ const ForgotPasswordPage = () => {
         <div className="w-[312px] mt-4 flex flex-col justify-center items-center">
           <Divider className="w-[210px] h-[1px] bg-[#E5E7EB] mt-[14px] mb-2"></Divider>
           <Link href="/login">
-            <Text variant="body" textColor='color-secondary'>
-              Regresar
+            <Text variant="label" textColor='color-primary'>
+              Volver al inicio de sesión
             </Text>
           </Link>
         </div>
@@ -78,32 +79,17 @@ const ForgotPasswordPage = () => {
       >
         <div className="flex flex-col items-center py-6 px-4">
           {/* Icono de check */}
-          <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-            <svg 
-              width="32" 
-              height="32" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-green-600"
-            >
-              <path 
-                d="M20 6L9 17L4 12" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-            </svg>
+          <div className="flex items-center justify-center mb-4">
+            <Icon name='CircleCheckBig' size={32} color="var(--color-primary)"/>
           </div>
           <h3 className="mb-3">
-            <Text variant="headline" weight="bold">
-              Email enviado
+            <Text variant="title" weight="bold">
+              Correo enviado
             </Text>
           </h3>
           <p className="mb-6">
-            <Text variant="body" textColor='color-black'>
-              Revisa tu correo electrónico y abre el enlace que te enviamos para continuar.
+            <Text variant="body" textColor='color-on-secondary'>
+              Revisa tu bandeja y sigue el enlace para restablecer tu contraseña.
             </Text>
           </p>
           
@@ -118,7 +104,7 @@ const ForgotPasswordPage = () => {
           
           {/* Link de login */}
           <div className="text-center">
-            <Text variant="body" textColor="color-black">
+            <Text variant="label" textColor="color-on-secondary">
               ¿Ya tienes una cuenta?{' '}
             </Text>
             <Link href="/login">

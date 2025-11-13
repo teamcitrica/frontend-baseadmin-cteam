@@ -39,6 +39,7 @@ interface AuthValue {
   } | null;
   changeRole: (v: number) => void;
   loading: boolean;
+  isInitializing: boolean;
 }
 
 const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -63,6 +64,8 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
   const [userSession, setUserSession] = useState<Session | null>(null);
   const [userInfo, setUserInfo] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [isInitializing, setIsInitializing] = useState(true);
+
 
   const changeRole = (newrole: number) => {
     const newUser = {
@@ -251,6 +254,7 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
         userSession,
         changeRole,
         loading,
+        isInitializing,
       }}
     >
       {children}
