@@ -3,7 +3,6 @@ import React from 'react'
 import { Container, Col } from '@/styles/07-objects/objects';
 import Icon from '@ui/atoms/icon';
 import { Button, Text, Sidebar, Input, Select } from '@citrica-ui';
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { addToast } from "@heroui/toast";
 
@@ -17,26 +16,26 @@ const SectionTypography = () => {
             <Icon name="AlarmClockMinus" size={40} />
             <Icon name="ChevronLeft" size={80} />
           </div>
-          <div>
+          <h1>
             <Text variant="display" textColor="color-on-container">Display</Text>
-          </div>
+          </h1>
           <section>
-            <h1>
+            <h2>
               <Text variant="headline" textColor="color-on-container">Headline</Text>
-            </h1>
+            </h2>
           </section>
-          <div>
+          <h3>
             <Text variant="title" textColor="color-on-container">Title</Text>
-          </div>
-          <div>
+          </h3>
+          <h4>
             <Text variant="subtitle" color="#F00">Subtitle</Text>
-          </div>
-          <div>
+          </h4>
+          <p>
             <Text variant="body" weight='bold'>Body</Text>
-          </div>
-          <div>
+          </p>
+          <p className='mb-8'>
             <Text variant="label">Label</Text>
-          </div>
+          </p>
           <div>
             <Button
               onClick={() => {
@@ -53,26 +52,28 @@ const SectionTypography = () => {
         </Col>
         <div className=''>
           <Input
-          label='nombre'
-          placeholder='escribe tu nombre aqui'
-          variant='primary'/>
+            label='nombre'
+            placeholder='escribe tu nombre aqui'
+            variant='primary'
+            size='lg'
+          />
         </div>
         <div>
-  <Select
-    variant="primary"
-    label="País"
-    placeholder="prueba de que sirve johan"
-    startIcon="Globe"
-    required
-    options={[
-      { value: "es", label: "España" },
-      { value: "mx", label: "México" },
-      { value: "ar", label: "Argentina" }
-    ]}
-    onSelectionChange={(keys) => {
-      console.log('Seleccionado:', keys);
-    }}
-  />
+          <Select
+            variant="primary"
+            label="País"
+            placeholder="prueba de que sirve johan"
+            startIcon="Globe"
+            required
+            options={[
+              { value: "es", label: "España" },
+              { value: "mx", label: "México" },
+              { value: "ar", label: "Argentina" }
+            ]}
+            onSelectionChange={(keys) => {
+              console.log('Seleccionado:', keys);
+            }}
+          />
         </div>
       </Container>
       <Container>
@@ -82,7 +83,7 @@ const SectionTypography = () => {
             className="rounded-md p-2 hover:bg-accent"
           >
             <Icon name="Sun" size={24} strokeWidth={1.4} className="text-on-accent" />
-            <span className="sr-only">Toggle theme</span>
+            <Text variant='label' className="sr-only">Toggle theme</Text>
           </button>
         </Col>
       </Container>

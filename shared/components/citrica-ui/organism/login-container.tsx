@@ -7,8 +7,9 @@ import { addToast } from "@heroui/toast"
 import { UserAuth } from '@/shared/context/auth-context'
 import { useForm } from "react-hook-form";
 import { Divider, Link } from "@heroui/react";
-import { Eye } from "lucide-react";
 import Button from '@/shared/components/citrica-ui/molecules/button';
+import { Container } from '@/styles/07-objects/objects'
+import Icon from '../atoms/icon'
 
 type FormValues = {
   firstName: string;
@@ -72,40 +73,39 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ logoSrc, backgroundImag
   }
 
   return (
-    <div className="w-[968px] flex justify-center">
+    <Container className="w-[968px] flex justify-center !flex-nowrap">
       <div className='container-inputs'>
-        <img className='w-[80px] pb-3' src={logoSrc} alt="Logo" />
-        <Text textColor="white" variant="body">
-          <h2>BIENVENIDO</h2>
-        </Text>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className='flex flex-col gap-5 my-4'>
-            <Input
-              type="email"
-              placeholder="Email"
-              {...register("email")}
-              disabled={isLoading}
-
-            />
-            <Input
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              {...register("password")}
-              disabled={isLoading}
-
-              endContent={
-                <Eye
-                  className="text-[#66666666] cursor-pointer w-5 h-5"
-                  onClick={() => setShowPassword((prev) => !prev)}
-                />
-              }
-            />
-          </div>
-
+        <img className='w-[80px] pb-3 items-center' src="/img/citrica-logo.png" alt="Logo" />
+        <h2 className='text-center mb-4'>
+          <Text textColor="white" variant="body">
+            BIENVENIDO
+          </Text>
+        </h2>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center gap-3'>
+          <Input
+            type="email"
+            placeholder="Correo electónico"
+            {...register("email")}
+            disabled={isLoading}
+            required
+          />
+          <Input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            {...register("password")}
+            disabled={isLoading}
+            required
+            endContent={
+              <Icon name="Eye"
+                className="text-[#66666666] cursor-pointer w-5 h-5"
+                onClick={() => setShowPassword((prev) => !prev)}
+              />
+            }
+          />
           <Button
             type="submit"
             variant="primary"
-            label={isLoading ? 'Accediendo...' : 'Acceder'}
+            label={isLoading ? 'Accediendo...' : 'Iniciar Sesión'}
             disabled={isLoading}
             isLoading={isLoading}
             fullWidth={true}
@@ -114,19 +114,16 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ logoSrc, backgroundImag
         </form>
 
         <div className="w-[312px] h-[94px] mt-4 flex flex-col justify-center items-center">
-          <Divider className="max-w-[380px] h-[1px] bg-[#E5E7EB] mt-[14px] mb-2"></Divider>
+          <Divider className="w-[210px] h-[1px] bg-[#E5E7EB] mt-[14px] mb-2"></Divider>
           <Link href="/forgot-password">
-            <Text variant="body">
+            <Text variant="body" textColor='color-black'>
               ¿Olvidaste tu contraseña?
             </Text>
           </Link>
         </div>
       </div>
-      <div
-        className='bg-login not-sm'
-        //style={{ backgroundImage: `url(${backgroundImage})` }}
-      ></div>
-    </div>
+      <div className='bg-login not-sm'></div>
+    </Container>
   )
 }
 

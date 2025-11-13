@@ -2,8 +2,8 @@
 
 // DISPLAY
 $display-responsive: (
-   sm: (
-    font-size: 36px,
+  sm: (
+    font-size: 32px,
     line-height: 40px
   ),
   md: (
@@ -17,16 +17,16 @@ $display-responsive: (
 );
 .text-display {
   font-family: var(--font-family-a);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($display-responsive);
   &-bold{
-    font-weight: 700;
+    font-weight: 900;
   }
   &-light{
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -43,21 +43,21 @@ $headline-responsive: (
   lg: (
     font-size: 32px,
     line-height: 40px
- 
+
   )
 );
 .text-headline {
   font-family: var(--font-family-a);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($headline-responsive);
   &-bold{
-    font-weight: 700;
+    font-weight: 900;
   }
   &-light{
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -74,21 +74,21 @@ $body-big-responsive: (
   lg: (
     font-size: 40px,
     line-height: 40px
- 
+
   )
 );
 .text-body-big {
   font-family: var(--font-family-a);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($body-big-responsive);
   &-bold{
-    font-weight: 700;
+    font-weight: 900;
   }
   &-light{
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -109,7 +109,7 @@ $title-responsive: (
 );
 .text-title {
   font-family: var(--font-family-b);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -118,7 +118,7 @@ $title-responsive: (
     font-weight: 700;
   }
   &-light{
-    font-weight: 300;
+    font-weight: 200;
   }
 }
 
@@ -140,16 +140,16 @@ $subtitle-responsive: (
 );
 .text-subtitle {
   font-family: var(--font-family-a);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($subtitle-responsive);
   &-bold{
-    font-weight: 700;
+    font-weight: 900;
   }
   &-light{
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
@@ -169,8 +169,8 @@ $body-responsive: (
   )
 );
 .text-body {
-  font-family: var(--font-family-a);
-  font-weight: 500;
+  font-family: var(--font-family-b);
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -179,14 +179,14 @@ $body-responsive: (
     font-weight: 700;
   }
   &-light{
-    font-weight: 300;
+    font-weight: 200;
   }
 }
 
 // LABEL
 $label-responsive: (
   sm: (
-    font-size: 11px,
+    font-size: 12px,
     line-height: 16px
   ),
   md: (
@@ -199,8 +199,8 @@ $label-responsive: (
   )
 );
 .text-label {
-  font-family: var(--font-family-c);
-  font-weight: 500;
+  font-family: var(--font-family-b);
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -209,7 +209,7 @@ $label-responsive: (
     font-weight: 700;
   }
   &-light{
-    font-weight: 300;
+    font-weight: 200;
   }
 }
 

@@ -51,12 +51,12 @@ const Header = ({
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/10 backdrop-blur-md' 
+            ? 'bg-transparent/60 shadow-md backdrop-blur-md' 
             : 'bg-transparent'
         } ${className}`}
       >
         <Container>
-          <Col cols={{ lg: 12, md: 6, sm: 4 }} className="flex justify-between items-center py-6">
+          <Col cols={{ lg: 12, md: 6, sm: 4 }} className="flex justify-between items-center py-4">
             
             {/* Logo */}
             <div className="flex items-center">
@@ -70,11 +70,7 @@ const Header = ({
                     </div>
                   </div>
                   <div>
-                    <Text 
-                      variant="title" 
-                      color="#FFFFFF"
-                      weight="bold"
-                    >
+                    <Text variant="title" color="#FFFFFF" weight="bold">
                       Matour
                     </Text>
                   </div>
@@ -83,8 +79,8 @@ const Header = ({
             </div>
 
             {/* Desktop Navigation Centrada */}
-            <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
-              <div className="bg-white/20 backdrop-blur-md rounded-full px-8 py-3">
+            <div className="hidden lg:flex items-center justify-center flex-1">
+              <div className="bg-white/60 backdrop-blur-md rounded-full px-8 py-2">
                 <div className="flex items-center space-x-8">
                   {navItems.map((item, index) => (
                     <button
@@ -92,7 +88,7 @@ const Header = ({
                       onClick={() => scrollToSection(item.href)}
                       className="transition-colors duration-200 hover:text-[#f0f0f0] text-white/90"
                     >
-                      <Text variant="body" className="font-medium">
+                      <Text variant="label" textColor="color-on-surface">
                         {item.title}
                       </Text>
                     </button>
@@ -120,13 +116,9 @@ const Header = ({
                 size="sm" 
                 variant="flat" 
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2"
+                className="p-2 !min-w-0"
               >
-                <Icon 
-                  name="Menu" 
-                  size={24} 
-                  className="text-white" 
-                />
+                <Icon name="Menu" size={24} className="var(--color-white)" />
               </Button>
             </div>
           </Col>
@@ -183,8 +175,8 @@ const Header = ({
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white shadow-md' 
-            : 'bg-white/95 backdrop-blur-sm'
+            ? 'bg-[var(--color-white)] shadow-md backdrop-blur-md' 
+            : 'bg-[var(--color-white)] backdrop-blur-sm'
         } ${className}`}
       >
         <Container>
@@ -198,7 +190,7 @@ const Header = ({
                   onClick={() => scrollToSection(item.href)}
                   className="transition-colors duration-200 hover:text-[#6366f1] text-gray-600"
                 >
-                  <Text variant="body" className="font-medium">
+                  <Text variant="body" weight='bold' textColor='color-black'>
                     {item.title}
                   </Text>
                 </button>
@@ -217,11 +209,7 @@ const Header = ({
                     </div>
                   </div>
                   <div>
-                    <Text 
-                      variant="title" 
-                      textColor="color-black"
-                      weight="bold"
-                    >
+                    <Text variant="title" weight='bold' textColor='color-black'>
                       Flowblox
                     </Text>
                   </div>
@@ -230,16 +218,16 @@ const Header = ({
             </div>
 
             {/* Right Section */}
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-8">
               {/* Right Navigation */}
-              <div className="hidden lg:flex items-center space-x-6">
+              <div className="hidden lg:flex items-center space-x-8">
                 {rightItems.map((item, index) => (
                   <button
                     key={index}
                     onClick={() => scrollToSection(item.href)}
-                    className="transition-colors duration-200 hover:text-[#6366f1] text-gray-600"
+                    className="transition-colors duration-200 hover:text-[#6366f1]"
                   >
-                    <Text variant="body" className="font-medium">
+                    <Text variant="body" weight='bold' textColor='color-black'>
                       {item.title}
                     </Text>
                   </button>
@@ -263,13 +251,9 @@ const Header = ({
                   size="sm" 
                   variant="flat" 
                   onClick={() => setIsOpen(!isOpen)}
-                  className="p-2"
+                  className="p-2 !min-w-0"
                 >
-                  <Icon 
-                    name="Menu" 
-                    size={24} 
-                    className="text-gray-600" 
-                  />
+                  <Icon name="Menu" size={24} className="text-gray-600" />
                 </Button>
               </div>
             </div>
@@ -321,12 +305,12 @@ const Header = ({
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-[#F7F2ED] backdrop-blur-md shadow-lg' 
-            : 'bg-[#E5DFD7]'
+            ? 'bg-[var(--color-white)] shadow-lg backdrop-blur-md' 
+            : 'bg-[var(--color-white)] backdrop-blur-sm'
         } ${className}`}
       >
         <Container>
-          <Col cols={{ lg: 12, md: 6, sm: 4 }} className="flex justify-between items-center py-4">
+          <Col cols={{ lg: 12, md: 6, sm: 4 }} className="flex justify-between items-center py-2">
             
             {/* Logo */}
             <a href="#home" className="flex items-center">
@@ -342,7 +326,7 @@ const Header = ({
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-5">
+            <div className="hidden md:flex items-center space-x-4">
               {navItems.map((item, index) => (
                 <button
                   key={index}
@@ -374,11 +358,7 @@ const Header = ({
                 onClick={() => setIsOpen(!isOpen)}
                 className="p-2 !min-w-0"
               >
-                <Icon
-                  name="Menu"
-                  size={24}
-                  className="text-[#222222]"
-                />
+                <Icon name="Menu" size={24} className="text-[#222222]"/>
               </Button>
             </div>
           </Col>
@@ -427,8 +407,8 @@ const Header = ({
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
+          ? 'bg-[var(--color-white)] shadow-md backdrop-blur-md' 
+          : 'bg-[var(--color-white)] backdrop-blur-sm'
       } ${className}`}
     >
       <Container>
@@ -447,11 +427,7 @@ const Header = ({
                   <div className="w-2 h-8 bg-[#8d957e] rounded-sm"></div>
                 </div>
                 <div>
-                  <Text 
-                    variant="subtitle" 
-                    textColor="color-on-surface"
-                    weight="bold"
-                  >
+                  <Text variant="subtitle" textColor="color-on-surface" weight="bold">
                     LIENZO
                   </Text>
                 </div>
@@ -490,13 +466,9 @@ const Header = ({
               size="sm" 
               variant="flat" 
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2"
+              className="p-2 !min-w-0"
             >
-              <Icon 
-                name="Menu" 
-                size={24} 
-                className="text-[#222222]" 
-              />
+              <Icon name="Menu" size={24} className="text-[#222222]" />
             </Button>
           </div>
         </Col>

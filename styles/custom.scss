@@ -6,3 +6,9 @@
 .bg-black-gradient {
   background-color: var(--color-surface-container);
 }
+
+.max-character-width {
+  max-width: 80ch;
+  text-wrap: balance;
+  margin: 0 auto;
+}
