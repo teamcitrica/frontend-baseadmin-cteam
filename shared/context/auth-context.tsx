@@ -221,6 +221,7 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
         getUserInfo(session.user.id);
       }
       setLoading(false);
+      setIsInitializing(false);
     });
 
     const { data: authListener } = supabase.auth.onAuthStateChange(
@@ -235,6 +236,7 @@ export const AuthContextProvider = ({ children }: { children: any }) => {
           setUserInfo(null);
         }
         setLoading(false);
+        setIsInitializing(false);
       },
     );
 

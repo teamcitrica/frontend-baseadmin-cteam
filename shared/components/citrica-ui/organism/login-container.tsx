@@ -15,7 +15,7 @@ type FormValues = {
   email: string;
 };
 
-const LoginPage = () => {
+const LoginContainer = () => {
   const { register, handleSubmit } = useForm<FormValues>();
   const { signInWithPassword, userSession, isInitializing } = UserAuth();
   const [showPassword, setShowPassword] = useState(false);
@@ -55,7 +55,7 @@ const LoginPage = () => {
           description: respError.message || "Correo o contraseña incorrectos.",
           color: "danger",
         })
-      } 
+      }
     } catch (error) {
       console.error('Login error:', error)
       addToast({
@@ -77,13 +77,14 @@ const LoginPage = () => {
             ¡Bienvenido!
           </Text>
         </h2>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center'>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col justify-center gap-4'>
           <Input
             type="email"
             placeholder="Correo electónico"
             {...register("email")}
             disabled={isLoading}
             required
+            className='!p-0'
           />
           <Input
             type={showPassword ? "text" : "password"}
@@ -92,13 +93,14 @@ const LoginPage = () => {
             disabled={isLoading}
             required
             endContent={
-              <Icon name="Eye"
-                className="text-[#66666666] cursor-pointer w-5 h-5"
+              <Icon name="Eye" size={12} color='#66666666'
+                className="cursor-pointer"
                 onClick={() => setShowPassword((prev) => !prev)}
               />
             }
+            className='!p-0'
           />
-          <Button
+          <Button 
             type="submit"
             variant="primary"
             label={isLoading ? 'Accediendo...' : 'Iniciar sesión'}
@@ -123,4 +125,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default LoginContainer

@@ -13,6 +13,7 @@ $btn-citrica-ui: (
 .btn-citrica-ui{
   border-radius: var(--form-radius-btn);
   min-width: 140px;
+  max-width: 380px;
   &:hover, &:active, &:focus { // AVOID DEFAULT OPACITY CHANGE
     opacity: 1 !important;
     border-color: inherit !important;

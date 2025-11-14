@@ -39,7 +39,7 @@ const ForgotPasswordPage = () => {
             Escribe tu correo para recuperar el acceso.
           </Text>
         </p>
-        <form className='flex flex-col justify-center' onSubmit={handleSubmit}>
+        <form className='flex flex-col justify-center gap-4' onSubmit={handleSubmit}>
           <Input
             type="email"
             placeholder="Correo electrónico"
@@ -47,7 +47,7 @@ const ForgotPasswordPage = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             description='Te enviaremos un enlace para restablecerla.'
-            className='mb-2'
+            className='!p-0'
           />
           <Button 
             type="submit"
@@ -88,7 +88,7 @@ const ForgotPasswordPage = () => {
             </Text>
           </h3>
           <p className="mb-6">
-            <Text variant="body" textColor='color-on-secondary'>
+            <Text variant="body" textColor='color-black'>
               Revisa tu bandeja y sigue el enlace para restablecer tu contraseña.
             </Text>
           </p>
@@ -104,7 +104,7 @@ const ForgotPasswordPage = () => {
           
           {/* Link de login */}
           <div className="text-center">
-            <Text variant="label" textColor="color-on-secondary">
+            <Text variant="label" textColor="color-black">
               ¿Ya tienes una cuenta?{' '}
             </Text>
             <Link href="/login">

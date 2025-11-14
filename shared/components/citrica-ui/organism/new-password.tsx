@@ -59,12 +59,12 @@ const NewPasswordPage = () => {
             disabled={isLoading}
             required
             endContent={
-              <Icon name="Eye"
-                size={12}
-                className="text-[#66666666] cursor-pointer"
+              <Icon name="Eye" size={12} color='#66666666'
+                className="cursor-pointer"
                 onClick={() => setShowPassword((prev) => !prev)}
               />
             }
+            className='!p-0'
           />
           <Button
             type="submit"
@@ -105,7 +105,7 @@ const NewPasswordPage = () => {
             </Text>
           </h3>
           <p className="mb-6">
-            <Text variant="body" textColor='color-on-secondary'>
+            <Text variant="body" textColor='color-black'>
               Ya puedes iniciar sesión con tu nueva contraseña.
             </Text>
           </p>
