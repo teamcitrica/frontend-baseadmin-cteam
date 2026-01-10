@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin '../hero.ts';
+
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans: "font", sans-serif;
+    --font-mono: "monospace", monospace;
+}
 
 /* Citrica Grid System */
 @import '01-settings/settings.scss';
@@ -14,8 +23,7 @@
 @import '09-utilities/utilities.scss';
 @import '10-tokens/tokens.scss';
 @import '11-atomic-design/components.scss';
-@import './custom.scss'
-
+@import './custom.scss';
 
 /* NO EDITAR */
 /* EDITAR EN custom.scss */
