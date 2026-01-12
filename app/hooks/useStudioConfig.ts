@@ -23,9 +23,9 @@ export const useStudioConfig = () => {
         .single();
 
       if (error) {
-        // Si el error es "no rows" significa que no existe el config, retornar null silenciosamente
+        // Si el error es "no rows" significa que no existe el config, retornar undefined silenciosamente
         if (error.code === 'PGRST116') {
-          return { success: true, value: null };
+          return { success: true, value: undefined };
         }
         console.error(`Error getting config ${key}:`, error);
         return { success: false, error };
