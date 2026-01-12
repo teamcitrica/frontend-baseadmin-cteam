@@ -3,7 +3,7 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
-Study-Expeditions is a Next.js 15 application built with HeroUI components, focused on managing study expedition requests for institutions. The app features a responsive design with both light/dark theme support and admin panel functionality.
+frontend-base-admin-cteam is a Next.js 15 base administration application built with HeroUI components. The app features a responsive design with light/dark theme support and a complete admin panel for managing bookings (reservas), clients (clientes), tasks (tareas), and app configuration.
 
 ## Essential Commands
 - **Development**: `npm run dev` (with Turbo mode enabled)  
@@ -59,8 +59,12 @@ Multi-variant header component with optional button functionality:
 ## Key Features & Patterns
 - **Responsive Navbar**: Auto-changing colors on scroll, mobile drawer menu
 - **Admin Panel**: Sidebar navigation with nested sub-items using URL search params
-- **Form Management**: Custom hooks for study expedition requests with Supabase integration
-- **Authentication**: Supabase auth context (currently commented out in layout)
+  - `/admin/reservas` - Booking management with calendar, weekly, and availability views
+  - `/admin/clientes` - Client management
+  - `/admin/tareas` - Task management
+  - `/admin/config-app` - Application configuration
+- **Form Management**: Custom hooks for data management with Supabase integration
+- **Authentication**: Supabase auth context with login, forgot password, and new password pages
 - **Toast System**: HeroUI toast provider with top-right placement
 
 ## Database Integration
