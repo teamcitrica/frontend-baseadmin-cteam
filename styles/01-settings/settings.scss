@@ -1,5 +1,6 @@
 @import 'mixins.scss';
-@import 'colors.scss';
+@import 'colors/colors.scss';
+@import 'colors-admin/colors-admin.scss';
 // ==================================================
 // SETTINGS
 // ==================================================
@@ -19,7 +20,7 @@ $border-bold: "";
 $border-extra-bold: "";
 
 // FONTS GOOGLE
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap';
 
 // FONTS LOCALES
@@ -28,14 +29,12 @@ $border-extra-bold: "";
     src: url('../../fonts/Chunkfive_Ex.ttf');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 @font-face {
     font-family: "Restora";
     src: url('../../fonts/RestoraExtraLight.ttf');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -43,7 +42,6 @@ $border-extra-bold: "";
     src: url('../../fonts/Manrope-Bold.ttf');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -51,7 +49,6 @@ $border-extra-bold: "";
     src: url('../../fonts/Manrope-ExtraBold.ttf');
     font-weight: 800;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -59,7 +56,6 @@ $border-extra-bold: "";
     src: url('../../fonts/Manrope-Medium.ttf');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -67,7 +63,6 @@ $border-extra-bold: "";
     src: url('../../fonts/Manrope-Regular.ttf');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -75,7 +70,6 @@ $border-extra-bold: "";
     src: url('../../fonts/Manrope-Light.ttf');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -83,14 +77,50 @@ $border-extra-bold: "";
     src: url('../../fonts/Manrope-ExtraLight.ttf');
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
 }
 
-  
+@font-face {
+    font-family: "Sansation";
+    src: url('../../fonts/Sansation-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Sansation";
+    src: url('../../fonts/Sansation-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Sansation";
+    src: url('../../fonts/Sansation-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Sansation";
+    src: url('../../fonts/Sansation-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Sansation";
+    src: url('../../fonts/Sansation-LightItalic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Sansation";
+    src: url('../../fonts/Sansation-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // CITRICA SYSTEM TYPOGRAPJY
 $font-family-a: 'Roboto';
 $font-family-b: 'Poppins', sans-serif;
 $font-family-c: 'Poppins', sans-serif;
+$font-family-d: 'Sansation';
 
 // CITRICA SYSTEM OPACITY
 $opacity-1:"";
@@ -162,6 +192,7 @@ $root-vars: (
         --font-family-a: $font-family-a,
         --font-family-b: $font-family-b,
         --font-family-c: $font-family-c,
+        --font-family-d: $font-family-d,
         // CUSTOM
     ),
     md: (

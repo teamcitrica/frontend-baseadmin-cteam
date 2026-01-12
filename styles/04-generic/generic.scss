@@ -1,16 +1,27 @@
-@import '../01-settings/colors.scss';
-@import '../01-settings/colors-dark-theme.scss';
-@import '../01-settings/colors-light-theme.scss';
+// Colors
+@import '../01-settings/colors/colors.scss';
+@import '../01-settings/colors/colors-dark-theme.scss';
+@import '../01-settings/colors/colors-light-theme.scss';
+// Admin colors
+@import '../01-settings/colors-admin/colors-admin.scss';
+@import '../01-settings/colors-admin/colors-admin-dark-theme.scss';
+@import '../01-settings/colors-admin/colors-admin-light-theme.scss';
 @import '../10-tokens/form-tokens.scss';
 :root{
+  // Default light theme
+  @include light-theme;
+  @include admin-light-theme;
+  @include a-set($root-vars);
+  @include form-tokens;
+
   &[data-theme="light"] {
     @include light-theme;
+    @include admin-light-theme;
   }
   &[data-theme="dark"] {
     @include dark-theme;
+    @include admin-dark-theme;
   }
-  @include a-set($root-vars);
-  @include form-tokens;
 }
 
 *,

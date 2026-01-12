@@ -5,7 +5,7 @@ import Button from "@ui/molecules/button";
 import Card from "@ui/atoms/card";
 import Icon from "@ui/atoms/icon";
 import Input from "@ui/atoms/input";
-import { Select, SelectItem } from "@heroui/react";
+import { Input as DateInput, Select, SelectItem } from "@heroui/react";
 
 import { useAdminBookings } from "@/app/hooks/useAdminBookings";
 
@@ -174,18 +174,24 @@ const QuickConfigManager = () => {
             </Text>
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Input
+            <DateInput
               label="Fecha de inicio"
               type="date"
               value={batchConfig.startDate}
               onChange={(e) => setBatchConfig({ ...batchConfig, startDate: e.target.value })}
+              className="input-citrica-ui input-primary"
+              variant="bordered"
+              color="default"
             />
 
-            <Input
+            <DateInput
               label="Fecha de fin"
               type="date"
               value={batchConfig.endDate}
               onChange={(e) => setBatchConfig({ ...batchConfig, endDate: e.target.value })}
+              className="input-citrica-ui input-primary"
+              variant="bordered"
+              color="default"
             />
 
             <div>

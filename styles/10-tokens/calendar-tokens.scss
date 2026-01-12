@@ -1,0 +1,250 @@
+$calendar-citrica-ui: (
+  sm: (
+    padding: 10px 0px,
+  ),
+  md: (
+    padding: 10px 0px,
+  ),
+  lg: (
+    padding: 10px 0px,
+  )
+);
+
+.calendar-citrica-ui {
+  @include a-set($calendar-citrica-ui);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-primary {
+  [data-slot="base"] {
+    background-color: var(--color-primary-calendar-base-bg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  [data-slot="header-wrapper"] {
+    background-color: var(--color-primary-calendar-header-bg);
+    color: var(--color-primary-calendar-header-text);
+  }
+  
+  [data-slot="header"] {
+    color: var(--color-primary-calendar-header-text);
+  }
+  
+  [data-slot="title"] {
+    color: var(--color-primary-calendar-header-text);
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  
+  [data-slot="prev-button"] {
+    color: var(--color-primary-calendar-header-text);
+    
+    &:hover {
+      background-color: var(--color-primary-calendar-header-hover);
+    }
+  }
+  
+  [data-slot="next-button"] {
+    color: var(--color-primary-calendar-header-text);
+    
+    &:hover {
+      background-color: var(--color-primary-calendar-header-hover);
+    }
+  }
+  
+  [data-slot="grid-wrapper"] {
+    background-color: var(--color-primary-calendar-grid-body-bg);
+  }
+  
+  [data-slot="grid-header"] {
+    background-color: var(--color-primary-calendar-grid-header-bg);
+  }
+  
+  [data-slot="grid-header-row"] {
+    padding-top: 6px;
+    background-color: var(--color-primary-calendar-grid-header-bg);
+  }
+  
+  [data-slot="grid-header-cell"] {
+    color: var(--color-primary-calendar-grid-header-text);
+    font-weight: 500;
+  }
+  
+  [data-slot="grid-body"] {
+    background-color: var(--color-primary-calendar-grid-body-bg);
+  }
+  
+  [data-slot="cell"] {
+    &:hover {
+      background-color: var(--color-primary-calendar-cell-hover);
+    }
+  }
+  
+  [data-slot="cell-button"] {
+    &:hover {
+      background-color: var(--color-primary-calendar-cell-button-hover);
+    }
+    
+    &[data-selected="true"] {
+      background-color: var(--color-primary-calendar-cell-selected) !important;
+      color: var(--color-primary-calendar-cell-selected-text) !important;
+      font-weight: 500;
+      
+      &:hover {
+        background-color: var(--color-primary-calendar-cell-selected-hover) !important;
+      }
+    }
+    
+    &[data-focus-visible="true"] {
+      background-color: var(--color-primary-calendar-cell-focus) !important;
+    }
+    
+    &[data-today="true"] {
+      background-color: var(--color-primary-calendar-cell-today-bg);
+      color: var(--color-primary-calendar-cell-today-text);
+      font-weight: 500;
+    }
+  }
+}
+
+// Estilos más específicos para sobrescribir HeroUI
+.calendar-primary {
+  [data-selected="true"] {
+    background-color: var(--color-primary-calendar-cell-selected) !important;
+    color: var(--color-primary-calendar-cell-selected-text) !important;
+    font-weight: 500 !important;
+    
+    &:hover {
+      background-color: var(--color-primary-calendar-cell-selected-hover) !important;
+    }
+  }
+  
+  [data-focus-visible="true"] {
+    background-color: var(--color-primary-calendar-cell-focus) !important;
+    outline: none !important;
+    border-color: var(--color-primary-calendar-cell-focus) !important;
+  }
+}
+
+.calendar-secondary {
+  [data-selected="true"] {
+    background-color: var(--color-secondary-calendar-cell-selected) !important;
+    color: var(--color-secondary-calendar-cell-selected-text) !important;
+    font-weight: 500 !important;
+    
+    &:hover {
+      background-color: var(--color-secondary-calendar-cell-selected-hover) !important;
+    }
+  }
+  
+  [data-focus-visible="true"] {
+    background-color: var(--color-secondary-calendar-cell-focus) !important;
+    outline: none !important;
+    border-color: var(--color-secondary-calendar-cell-focus) !important;
+  }
+}
+
+.calendar-secondary {
+  [data-slot="base"] {
+    background-color: var(--color-secondary-calendar-base-bg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  [data-slot="header-wrapper"] {
+    background-color: var(--color-secondary-calendar-header-bg);
+    color: var(--color-secondary-calendar-header-text);
+  }
+  
+  [data-slot="header"] {
+    color: var(--color-secondary-calendar-header-text);
+  }
+  
+  [data-slot="title"] {
+    color: var(--color-secondary-calendar-header-text);
+    font-weight: 500;
+  }
+  
+  [data-slot="prev-button"] {
+    color: var(--color-secondary-calendar-header-text);
+    
+    &:hover {
+      background-color: var(--color-secondary-calendar-header-hover);
+    }
+  }
+  
+  [data-slot="next-button"] {
+    color: var(--color-secondary-calendar-header-text);
+    
+    &:hover {
+      background-color: var(--color-secondary-calendar-header-hover);
+    }
+  }
+  
+  [data-slot="grid-wrapper"] {
+    background-color: var(--color-secondary-calendar-grid-body-bg);
+  }
+  
+  [data-slot="grid-header"] {
+    background-color: var(--color-secondary-calendar-grid-header-bg);
+  }
+  
+  [data-slot="grid-header-row"] {
+    background-color: var(--color-secondary-calendar-grid-header-bg);
+  }
+  
+  [data-slot="grid-header-cell"] {
+    color: var(--color-secondary-calendar-grid-header-text);
+    font-weight: 500;
+  }
+  
+  [data-slot="grid-body"] {
+    background-color: var(--color-secondary-calendar-grid-body-bg);
+  }
+  
+  [data-slot="cell"] {
+    &:hover {
+      background-color: var(--color-secondary-calendar-cell-hover);
+    }
+  }
+  
+  [data-slot="cell-button"] {
+    &:hover {
+      background-color: var(--color-secondary-calendar-cell-button-hover);
+    }
+    
+    &[data-selected="true"] {
+      background-color: var(--color-secondary-calendar-cell-selected) !important;
+      color: var(--color-secondary-calendar-cell-selected-text) !important;
+      font-weight: 500;
+      
+      &:hover {
+        background-color: var(--color-secondary-calendar-cell-selected-hover) !important;
+      }
+    }
+    
+    &[data-focus-visible="true"] {
+      background-color: var(--color-secondary-calendar-cell-focus) !important;
+    }
+    
+    &[data-today="true"] {
+      background-color: var(--color-secondary-calendar-cell-today-bg);
+      color: var(--color-secondary-calendar-cell-today-text);
+      font-weight: 500;
+    }
+  }
+}

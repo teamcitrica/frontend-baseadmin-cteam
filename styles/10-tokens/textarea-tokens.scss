@@ -12,7 +12,7 @@ $textarea-citrica-ui: (
 
 .textarea-citrica-ui{
   min-width: 140px;
-  max-width: 380px;
+  // max-width: 380px;
   @include a-set($textarea-citrica-ui);
   
   [data-slot="input-wrapper"] {

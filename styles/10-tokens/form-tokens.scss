@@ -1,10 +1,19 @@
 @mixin form-tokens {
-  --form-radius-input: 18px; // Border radius for inputs, selects, buttons, textareas
+  --form-radius-btn:20px;  // Border radius for inputs, selects, buttons, textareas
+  --form-radius-input: 10px; 
   --form-radius-select: var(--form-radius-input);
-  --form-radius-btn: var(--form-radius-input);
   --form-radius-textarea: var(--form-radius-input);
   --form-border-size-input: 2px; // Border size for inputs, selects, buttons, textareas
   --form-border-size-select: var(--form-border-size-input);
   --form-border-size-btn: var(--form-border-size-input);
   --form-border-size-textarea: var(--form-border-size-input);
+  // ADMIN FORM TOKENS
+  --form-admin-radius-btn:8px;  // Border radius for inputs, selects, buttons, textareas
+  --form-admin-radius-input: 10px; 
+  --form-admin-radius-select: var(--form-admin-radius-input);
+  --form-admin-radius-textarea: var(--form-admin-radius-input);
+  --form-admin-border-size-input: 2px; // Border size for inputs, selects, buttons, textareas
+  --form-admin-border-size-select: var(--form-admin-border-size-input);
+  --form-admin-border-size-btn: var(--form-admin-border-size-input);
+  --form-admin-border-size-textarea: var(--form-admin-border-size-input);
 }

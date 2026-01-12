@@ -1,9 +1,8 @@
-$container-inputs : (
-  sm: (padding: 10px 20px,
+$container-inputs : (sm: (padding: 0px 8px,
   ),
-  md: (padding: 10px 20px,
+  md: (padding: 0px px,
   ),
-  lg: (padding: 20px 50px,
+  lg: (padding: 0px 0px,
   ));
 
 .container-inputs {
@@ -20,18 +19,129 @@ $container-inputs : (
   box-shadow: 8px 8px 24px rgba(102, 102, 102, 0.3);
   background: #FFFFFF;
   @include a-set($container-inputs );
+  z-index: 10;
 }
 
 .bg-login {
-  background: url('/img/shot1.png');
+  background: url("/img/login-form-image-lg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   max-width: 484px;
   height: 473px;
-  border: 1px solid #E9E8DD;
+  // border: 1px solid #E9E8DD;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  box-shadow: 8px 8px 24px rgba(102, 102, 102, 0.3);
+  // box-shadow: 8px 8px 24px rgba(102, 102, 102, 0.3);
+  z-index: 10;
+}
+
+
+.container-background {
+  position: relative;
+  background-color: #16141F;
+  overflow: hidden;
+}
+
+/* Luz superior derecha */
+.light-top-right {
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 1200px;
+  height: 450px;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 91, 0, 1) 0%,
+    rgba(255, 91, 0, 1) 100%,
+    transparent 0%);
+  filter: blur(404px);
+  mix-blend-mode: color-dodge;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.ellipse2-top {
+  position: absolute;
+  top: -35%;
+  right: -15%;
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 91, 0, 1) 0%,
+    rgba(255, 91, 0, 1) 100%,
+    transparent 70%);
+  filter: blur(224px);
+  z-index: 2;
+}
+
+/* Luz inferior izquierda */
+.light-bottom-left {
+  position: absolute;
+  bottom: -40%;
+  left: -30%;
+  width: 1400px;
+  height: 400px;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 91, 0, 1) 0%,
+    rgba(255, 91, 0, 1) 100%,
+    transparent 70%);
+  filter: blur(404px);
+  mix-blend-mode: color-dodge;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.ellipse2-bottom {
+  position: absolute;
+  bottom: -35%;
+  left: -25%;
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center,
+    rgba(255, 91, 0, 1) 0%,
+    rgba(255, 91, 0, 1) 100%,
+    transparent 0%);
+  filter: blur(224px);
+  z-index: 2;
+}
+
+$line-top : (
+  sm: (
+    top: 100px,
+  ),
+  md: (
+    top: -10px,
+  ),
+  lg: (
+    top: -10px,
+  ));
+
+.line-top {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  pointer-events: none;
+  @include a-set($line-top );
+}
+
+$line-bottom : (
+  sm: (
+    bottom: 100px,
+  ),
+  md: (
+    bottom: -10px,
+  ),
+  lg: (
+    bottom: -50px,
+  ));
+
+.line-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  pointer-events: none;
+  @include a-set($line-bottom );
 }

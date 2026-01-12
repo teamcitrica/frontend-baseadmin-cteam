@@ -1,0 +1,214 @@
+// _dark-theme.scss
+@import './colors.scss';
+
+@mixin dark-theme {
+  // Black & white
+  --color-text-white: #{$color-text-white};
+  --color-text-black: #{$color-text-black};
+  
+  // Primary colors
+  --color-primary: #{$color-dark-primary};
+  --color-on-primary: #{$color-dark-on-primary};
+  --color-primary-container: #{$color-dark-primary-container};
+  --color-on-primary-container: #{$color-dark-on-primary-container};
+  --color-primary-fixed: #{$color-dark-primary-fixed};
+  --color-on-primary-fixed: #{$color-dark-on-primary-fixed};
+  --color-on-primary-fixed-variant: #{$color-dark-on-primary-fixed-variant};
+  --color-primary-fixed-dim: #{$color-dark-primary-fixed-dim};
+
+  // Secondary colors
+  --color-secondary: #{$color-dark-secondary};
+  --color-on-secondary: #{$color-dark-on-secondary};
+  --color-secondary-container: #{$color-dark-secondary-container};
+  --color-on-secondary-container: #{$color-dark-on-secondary-container};
+  --color-secondary-fixed: #{$color-dark-secondary-fixed};
+  --color-on-secondary-fixed: #{$color-dark-on-secondary-fixed};
+  --color-on-secondary-fixed-variant: #{$color-dark-on-secondary-fixed-variant};
+  --color-secondary-fixed-dim: #{$color-dark-secondary-fixed-dim};
+
+  // Tertiary colors
+  --color-tertiary: #{$color-dark-tertiary};
+  --color-on-tertiary: #{$color-dark-on-tertiary};
+  --color-tertiary-container: #{$color-dark-tertiary-container};
+  --color-on-tertiary-container: #{$color-dark-on-tertiary-container};
+  --color-tertiary-fixed: #{$color-dark-tertiary-fixed};
+  --color-on-tertiary-fixed: #{$color-dark-on-tertiary-fixed};
+  --color-on-tertiary-fixed-variant: #{$color-dark-on-tertiary-fixed-variant};
+  --color-tertiary-fixed-dim: #{$color-dark-tertiary-fixed-dim};
+
+  // Cuaternary colors
+  --color-cuaternary: #{$color-dark-cuaternary};
+  --color-on-cuaternary: #{$color-dark-on-cuaternary};
+  --color-cuaternary-container: #{$color-dark-cuaternary-container};
+  --color-on-cuaternary-container: #{$color-dark-on-cuaternary-container};
+  --color-cuaternary-fixed: #{$color-dark-cuaternary-fixed};
+  --color-on-cuaternary-fixed: #{$color-dark-on-cuaternary-fixed};
+  --color-on-cuaternary-fixed-variant: #{$color-dark-on-cuaternary-fixed-variant};
+  --color-cuaternary-fixed-dim: #{$color-dark-cuaternary-fixed-dim};
+
+  // Quinary colors
+  --color-quinary: #{$color-dark-quinary};
+  --color-on-quinary: #{$color-dark-on-quinary};
+  --color-quinary-container: #{$color-dark-quinary-container};
+  --color-on-quinary-container: #{$color-dark-on-quinary-container};
+  --color-quinary-fixed: #{$color-dark-quinary-fixed};
+  --color-on-quinary-fixed: #{$color-dark-on-quinary-fixed};
+  --color-on-quinary-fixed-variant: #{$color-dark-on-quinary-fixed-variant};
+  --color-quinary-fixed-dim: #{$color-dark-quinary-fixed-dim};
+
+  // Semantic colors
+  --color-error: #{$color-dark-error};
+  --color-on-error: #{$color-dark-on-error};
+  --color-error-container: #{$color-dark-error-container};
+  --color-on-error-container: #{$color-dark-on-error-container};
+
+  --color-warning: #{$color-dark-warning};
+  --color-on-warning: #{$color-dark-on-warning};
+  --color-warning-container: #{$color-dark-warning-container};
+  --color-on-warning-container: #{$color-dark-on-warning-container};
+
+  --color-success: #{$color-dark-success};
+  --color-on-success: #{$color-dark-on-success};
+  --color-success-container: #{$color-dark-success-container};
+  --color-on-success-container: #{$color-dark-on-success-container};
+
+  // Surface colors
+  --color-surface: #{$color-dark-surface};
+  --color-on-surface: #{$color-dark-on-surface};
+  --color-surface-dim: #{$color-dark-surface-dim};
+  --color-surface-bright: #{$color-dark-surface-bright};
+  --color-on-surface-var: #{$color-dark-on-surface-var};
+  --color-surface-container: #{$color-dark-surface-container};
+  --color-surface-container-lowest: #{$color-dark-surface-container-lowest};
+  --color-surface-container-low: #{$color-dark-surface-container-low};
+  --color-surface-container-high: #{$color-dark-surface-container-high};
+  --color-surface-container-highest: #{$color-dark-surface-container-highest};
+
+  // Outline colors
+  --color-outline: #{$color-dark-outline};
+  --color-outline-variant: #{$color-dark-outline-variant};
+
+  // Inverse colors
+  --color-inverse-surface: #{$color-dark-inverse-surface};
+  --color-inverse-on-surface: #{$color-dark-inverse-on-surface};
+  --color-inverse-primary: #{$color-dark-inverse-primary};
+
+    // Button colors
+  --color-primary-btn: #{$color-dark-primary-btn};
+  --color-primary-btn-text: #{$color-dark-primary-btn-text};
+  --color-primary-btn-hover: #{$color-dark-primary-btn-hover};
+  --color-primary-btn-text-hover: #{$color-dark-primary-btn-text-hover};
+  --color-primary-btn-border: #{$color-dark-primary-btn-border};
+  --color-primary-btn-border-hover: #{$color-dark-primary-btn-border-hover};
+
+  --color-secondary-btn: #{$color-dark-secondary-btn};
+  --color-secondary-btn-text: #{$color-dark-secondary-btn-text};
+  --color-secondary-btn-hover: #{$color-dark-secondary-btn-hover};
+  --color-secondary-btn-text-hover: #{$color-dark-secondary-btn-text-hover};
+  --color-secondary-btn-border: #{$color-dark-secondary-btn-border};
+  --color-secondary-btn-border-hover: #{$color-dark-secondary-btn-border-hover};
+
+  --color-flat-btn: #{$color-dark-flat-btn};
+  --color-flat-btn-text: #{$color-dark-flat-btn-text};
+  --color-flat-btn-hover: #{$color-dark-flat-btn-hover};
+  --color-flat-btn-text-hover: #{$color-dark-flat-btn-text-hover};
+  --color-flat-btn-border: #{$color-dark-flat-btn-border};
+  --color-flat-btn-border-hover: #{$color-dark-flat-btn-border-hover};
+  
+  // Input colors
+  --color-primary-input-bg: #{$color-dark-primary-input-bg};
+  --color-primary-input-border: #{$color-dark-primary-input-border};
+  --color-primary-input-border-hover: #{$color-dark-primary-input-border-hover};
+  --color-primary-input-label: #{$color-dark-primary-input-label};
+  --color-primary-input-text: #{$color-dark-primary-input-text};
+  --color-primary-input-text-hover: #{$color-dark-primary-input-text-hover};
+  --color-primary-input-placeholder: #{$color-dark-primary-input-placeholder};
+
+  --color-secondary-input-bg: #{$color-dark-secondary-input-bg};
+  --color-secondary-input-border: #{$color-dark-secondary-input-border};
+  --color-secondary-input-border-hover: #{$color-dark-secondary-input-border-hover};
+  --color-secondary-input-label: #{$color-dark-secondary-input-label};
+  --color-secondary-input-text: #{$color-dark-secondary-input-text};
+  --color-secondary-input-text-hover: #{$color-dark-secondary-input-text-hover};
+  --color-secondary-input-placeholder: #{$color-dark-secondary-input-placeholder};
+
+  // Select colors
+  --color-primary-select-bg: #{$color-dark-primary-select-bg};
+  --color-primary-select-border: #{$color-dark-primary-select-border};
+  --color-primary-select-border-hover: #{$color-dark-primary-select-border-hover};
+  --color-primary-select-label: #{$color-dark-primary-select-label};
+  --color-primary-select-text: #{$color-dark-primary-select-text};
+  --color-primary-select-text-hover: #{$color-dark-primary-select-text-hover};
+  --color-primary-select-placeholder: #{$color-dark-primary-select-placeholder};
+
+  --color-secondary-select-bg: #{$color-dark-secondary-select-bg};
+  --color-secondary-select-border: #{$color-dark-secondary-select-border};
+  --color-secondary-select-border-hover: #{$color-dark-secondary-select-border-hover};
+  --color-secondary-select-label: #{$color-dark-secondary-select-label};
+  --color-secondary-select-text: #{$color-dark-secondary-select-text};
+  --color-secondary-select-text-hover: #{$color-dark-secondary-select-text-hover};
+  --color-secondary-select-placeholder: #{$color-dark-secondary-select-placeholder};
+
+  // Select Items colors
+  --color-primary-select-item-text: #{$color-dark-primary-select-item-text};
+  --color-primary-select-item-bg: #{$color-dark-primary-select-item-bg};
+  --color-primary-select-item-bg-hover: #{$color-dark-primary-select-item-bg-hover};
+  --color-primary-select-item-bg-selected: #{$color-dark-primary-select-item-bg-selected};
+  --color-primary-select-item-text-selected: #{$color-dark-primary-select-item-text-selected};
+
+  --color-secondary-select-item-text: #{$color-dark-secondary-select-item-text};
+  --color-secondary-select-item-bg: #{$color-dark-secondary-select-item-bg};
+  --color-secondary-select-item-bg-hover: #{$color-dark-secondary-select-item-bg-hover};
+  --color-secondary-select-item-bg-selected: #{$color-dark-secondary-select-item-bg-selected};
+  --color-secondary-select-item-text-selected: #{$color-dark-secondary-select-item-text-selected};
+
+  // Textarea colors
+  --color-primary-textarea-bg: #{$color-dark-primary-textarea-bg};
+  --color-primary-textarea-border: #{$color-dark-primary-textarea-border};
+  --color-primary-textarea-border-hover: #{$color-dark-primary-textarea-border-hover};
+  --color-primary-textarea-label: #{$color-dark-primary-textarea-label};
+  --color-primary-textarea-text: #{$color-dark-primary-textarea-text};
+  --color-primary-textarea-text-hover: #{$color-dark-primary-textarea-text-hover};
+  --color-primary-textarea-placeholder: #{$color-dark-primary-textarea-placeholder};
+
+  --color-secondary-textarea-bg: #{$color-dark-secondary-textarea-bg};
+  --color-secondary-textarea-border: #{$color-dark-secondary-textarea-border};
+  --color-secondary-textarea-border-hover: #{$color-dark-secondary-textarea-border-hover};
+  --color-secondary-textarea-label: #{$color-dark-secondary-textarea-label};
+  --color-secondary-textarea-text: #{$color-dark-secondary-textarea-text};
+  --color-secondary-textarea-text-hover: #{$color-dark-secondary-textarea-text-hover};
+  --color-secondary-textarea-placeholder: #{$color-dark-secondary-textarea-placeholder};
+
+  // Calendar colors
+  --color-primary-calendar-base-bg: #{$color-dark-primary-calendar-base-bg};
+  --color-primary-calendar-header-bg: #{$color-dark-primary-calendar-header-bg};
+  --color-primary-calendar-header-text: #{$color-dark-primary-calendar-header-text};
+  --color-primary-calendar-header-hover: #{$color-dark-primary-calendar-header-hover};
+  --color-primary-calendar-grid-header-bg: #{$color-dark-primary-calendar-grid-header-bg};
+  --color-primary-calendar-grid-header-text: #{$color-dark-primary-calendar-grid-header-text};
+  --color-primary-calendar-grid-body-bg: #{$color-dark-primary-calendar-grid-body-bg};
+  --color-primary-calendar-cell-hover: #{$color-dark-primary-calendar-cell-hover};
+  --color-primary-calendar-cell-button-hover: #{$color-dark-primary-calendar-cell-button-hover};
+  --color-primary-calendar-cell-selected: #{$color-dark-primary-calendar-cell-selected};
+  --color-primary-calendar-cell-selected-text: #{$color-dark-primary-calendar-cell-selected-text};
+  --color-primary-calendar-cell-selected-hover: #{$color-dark-primary-calendar-cell-selected-hover};
+  --color-primary-calendar-cell-focus: #{$color-dark-primary-calendar-cell-focus};
+  --color-primary-calendar-cell-today-bg: #{$color-dark-primary-calendar-cell-today-bg};
+  --color-primary-calendar-cell-today-text: #{$color-dark-primary-calendar-cell-today-text};
+
+  --color-secondary-calendar-base-bg: #{$color-dark-secondary-calendar-base-bg};
+  --color-secondary-calendar-header-bg: #{$color-dark-secondary-calendar-header-bg};
+  --color-secondary-calendar-header-text: #{$color-dark-secondary-calendar-header-text};
+  --color-secondary-calendar-header-hover: #{$color-dark-secondary-calendar-header-hover};
+  --color-secondary-calendar-grid-header-bg: #{$color-dark-secondary-calendar-grid-header-bg};
+  --color-secondary-calendar-grid-header-text: #{$color-dark-secondary-calendar-grid-header-text};
+  --color-secondary-calendar-grid-body-bg: #{$color-dark-secondary-calendar-grid-body-bg};
+  --color-secondary-calendar-cell-hover: #{$color-dark-secondary-calendar-cell-hover};
+  --color-secondary-calendar-cell-button-hover: #{$color-dark-secondary-calendar-cell-button-hover};
+  --color-secondary-calendar-cell-selected: #{$color-dark-secondary-calendar-cell-selected};
+  --color-secondary-calendar-cell-selected-text: #{$color-dark-secondary-calendar-cell-selected-text};
+  --color-secondary-calendar-cell-selected-hover: #{$color-dark-secondary-calendar-cell-selected-hover};
+  --color-secondary-calendar-cell-focus: #{$color-dark-secondary-calendar-cell-focus};
+  --color-secondary-calendar-cell-today-bg: #{$color-dark-secondary-calendar-cell-today-bg};
+  --color-secondary-calendar-cell-today-text: #{$color-dark-secondary-calendar-cell-today-text};
+}

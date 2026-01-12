@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <>
-      <Header logo={logo} variant="split" showButton buttonText="Hello" onButtonClick={ctaOnClick}/>
+      {/* <Header logo={logo} variant="split" showButton buttonText="Hello" onButtonClick={ctaOnClick}/> */}
       <section className="pt-[64px]">
         <SectionTypography />
         <SectionSkeleton />

@@ -1,0 +1,214 @@
+// _dark-theme.scss
+@import './colors-admin.scss';
+
+@mixin admin-dark-theme {
+  // Black & white
+  --color-admin-text-white: #{$color-admin-text-white};
+  --color-admin-text-black: #{$color-admin-text-black};
+  
+  // Primary colors
+  --color-admin-primary: #{$color-admin-dark-primary};
+  --color-admin-on-primary: #{$color-admin-dark-on-primary};
+  --color-admin-primary-container: #{$color-admin-dark-primary-container};
+  --color-admin-on-primary-container: #{$color-admin-dark-on-primary-container};
+  --color-admin-primary-fixed: #{$color-admin-dark-primary-fixed};
+  --color-admin-on-primary-fixed: #{$color-admin-dark-on-primary-fixed};
+  --color-admin-on-primary-fixed-variant: #{$color-admin-dark-on-primary-fixed-variant};
+  --color-admin-primary-fixed-dim: #{$color-admin-dark-primary-fixed-dim};
+
+  // Secondary colors
+  --color-admin-secondary: #{$color-admin-dark-secondary};
+  --color-admin-on-secondary: #{$color-admin-dark-on-secondary};
+  --color-admin-secondary-container: #{$color-admin-dark-secondary-container};
+  --color-admin-on-secondary-container: #{$color-admin-dark-on-secondary-container};
+  --color-admin-secondary-fixed: #{$color-admin-dark-secondary-fixed};
+  --color-admin-on-secondary-fixed: #{$color-admin-dark-on-secondary-fixed};
+  --color-admin-on-secondary-fixed-variant: #{$color-admin-dark-on-secondary-fixed-variant};
+  --color-admin-secondary-fixed-dim: #{$color-admin-dark-secondary-fixed-dim};
+
+  // Tertiary colors
+  --color-admin-tertiary: #{$color-admin-dark-tertiary};
+  --color-admin-on-tertiary: #{$color-admin-dark-on-tertiary};
+  --color-admin-tertiary-container: #{$color-admin-dark-tertiary-container};
+  --color-admin-on-tertiary-container: #{$color-admin-dark-on-tertiary-container};
+  --color-admin-tertiary-fixed: #{$color-admin-dark-tertiary-fixed};
+  --color-admin-on-tertiary-fixed: #{$color-admin-dark-on-tertiary-fixed};
+  --color-admin-on-tertiary-fixed-variant: #{$color-admin-dark-on-tertiary-fixed-variant};
+  --color-admin-tertiary-fixed-dim: #{$color-admin-dark-tertiary-fixed-dim};
+
+  // Cuaternary colors
+  --color-admin-cuaternary: #{$color-admin-dark-cuaternary};
+  --color-admin-on-cuaternary: #{$color-admin-dark-on-cuaternary};
+  --color-admin-cuaternary-container: #{$color-admin-dark-cuaternary-container};
+  --color-admin-on-cuaternary-container: #{$color-admin-dark-on-cuaternary-container};
+  --color-admin-cuaternary-fixed: #{$color-admin-dark-cuaternary-fixed};
+  --color-admin-on-cuaternary-fixed: #{$color-admin-dark-on-cuaternary-fixed};
+  --color-admin-on-cuaternary-fixed-variant: #{$color-admin-dark-on-cuaternary-fixed-variant};
+  --color-admin-cuaternary-fixed-dim: #{$color-admin-dark-cuaternary-fixed-dim};
+
+  // Quinary colors
+  --color-admin-quinary: #{$color-admin-dark-quinary};
+  --color-admin-on-quinary: #{$color-admin-dark-on-quinary};
+  --color-admin-quinary-container: #{$color-admin-dark-quinary-container};
+  --color-admin-on-quinary-container: #{$color-admin-dark-on-quinary-container};
+  --color-admin-quinary-fixed: #{$color-admin-dark-quinary-fixed};
+  --color-admin-on-quinary-fixed: #{$color-admin-dark-on-quinary-fixed};
+  --color-admin-on-quinary-fixed-variant: #{$color-admin-dark-on-quinary-fixed-variant};
+  --color-admin-quinary-fixed-dim: #{$color-admin-dark-quinary-fixed-dim};
+
+  // Semantic colors
+  --color-admin-error: #{$color-admin-dark-error};
+  --color-admin-on-error: #{$color-admin-dark-on-error};
+  --color-admin-error-container: #{$color-admin-dark-error-container};
+  --color-admin-on-error-container: #{$color-admin-dark-on-error-container};
+
+  --color-admin-warning: #{$color-admin-dark-warning};
+  --color-admin-on-warning: #{$color-admin-dark-on-warning};
+  --color-admin-warning-container: #{$color-admin-dark-warning-container};
+  --color-admin-on-warning-container: #{$color-admin-dark-on-warning-container};
+
+  --color-admin-success: #{$color-admin-dark-success};
+  --color-admin-on-success: #{$color-admin-dark-on-success};
+  --color-admin-success-container: #{$color-admin-dark-success-container};
+  --color-admin-on-success-container: #{$color-admin-dark-on-success-container};
+
+  // Surface colors
+  --color-admin-surface: #{$color-admin-dark-surface};
+  --color-admin-on-surface: #{$color-admin-dark-on-surface};
+  --color-admin-surface-dim: #{$color-admin-dark-surface-dim};
+  --color-admin-surface-bright: #{$color-admin-dark-surface-bright};
+  --color-admin-on-surface-var: #{$color-admin-dark-on-surface-var};
+  --color-admin-surface-container: #{$color-admin-dark-surface-container};
+  --color-admin-surface-container-lowest: #{$color-admin-dark-surface-container-lowest};
+  --color-admin-surface-container-low: #{$color-admin-dark-surface-container-low};
+  --color-admin-surface-container-high: #{$color-admin-dark-surface-container-high};
+  --color-admin-surface-container-highest: #{$color-admin-dark-surface-container-highest};
+
+  // Outline colors
+  --color-admin-outline: #{$color-admin-dark-outline};
+  --color-admin-outline-variant: #{$color-admin-dark-outline-variant};
+
+  // Inverse colors
+  --color-admin-inverse-surface: #{$color-admin-dark-inverse-surface};
+  --color-admin-inverse-on-surface: #{$color-admin-dark-inverse-on-surface};
+  --color-admin-inverse-primary: #{$color-admin-dark-inverse-primary};
+
+    // Button colors
+  --color-admin-primary-btn: #{$color-admin-dark-primary-btn};
+  --color-admin-primary-btn-text: #{$color-admin-dark-primary-btn-text};
+  --color-admin-primary-btn-hover: #{$color-admin-dark-primary-btn-hover};
+  --color-admin-primary-btn-text-hover: #{$color-admin-dark-primary-btn-text-hover};
+  --color-admin-primary-btn-border: #{$color-admin-dark-primary-btn-border};
+  --color-admin-primary-btn-border-hover: #{$color-admin-dark-primary-btn-border-hover};
+
+  --color-admin-secondary-btn: #{$color-admin-dark-secondary-btn};
+  --color-admin-secondary-btn-text: #{$color-admin-dark-secondary-btn-text};
+  --color-admin-secondary-btn-hover: #{$color-admin-dark-secondary-btn-hover};
+  --color-admin-secondary-btn-text-hover: #{$color-admin-dark-secondary-btn-text-hover};
+  --color-admin-secondary-btn-border: #{$color-admin-dark-secondary-btn-border};
+  --color-admin-secondary-btn-border-hover: #{$color-admin-dark-secondary-btn-border-hover};
+
+  --color-admin-flat-btn: #{$color-admin-dark-flat-btn};
+  --color-admin-flat-btn-text: #{$color-admin-dark-flat-btn-text};
+  --color-admin-flat-btn-hover: #{$color-admin-dark-flat-btn-hover};
+  --color-admin-flat-btn-text-hover: #{$color-admin-dark-flat-btn-text-hover};
+  --color-admin-flat-btn-border: #{$color-admin-dark-flat-btn-border};
+  --color-admin-flat-btn-border-hover: #{$color-admin-dark-flat-btn-border-hover};
+  
+  // Input colors
+  --color-admin-primary-input-bg: #{$color-admin-dark-primary-input-bg};
+  --color-admin-primary-input-border: #{$color-admin-dark-primary-input-border};
+  --color-admin-primary-input-border-hover: #{$color-admin-dark-primary-input-border-hover};
+  --color-admin-primary-input-label: #{$color-admin-dark-primary-input-label};
+  --color-admin-primary-input-text: #{$color-admin-dark-primary-input-text};
+  --color-admin-primary-input-text-hover: #{$color-admin-dark-primary-input-text-hover};
+  --color-admin-primary-input-placeholder: #{$color-admin-dark-primary-input-placeholder};
+
+  --color-admin-secondary-input-bg: #{$color-admin-dark-secondary-input-bg};
+  --color-admin-secondary-input-border: #{$color-admin-dark-secondary-input-border};
+  --color-admin-secondary-input-border-hover: #{$color-admin-dark-secondary-input-border-hover};
+  --color-admin-secondary-input-label: #{$color-admin-dark-secondary-input-label};
+  --color-admin-secondary-input-text: #{$color-admin-dark-secondary-input-text};
+  --color-admin-secondary-input-text-hover: #{$color-admin-dark-secondary-input-text-hover};
+  --color-admin-secondary-input-placeholder: #{$color-admin-dark-secondary-input-placeholder};
+
+  // Select colors
+  --color-admin-primary-select-bg: #{$color-admin-dark-primary-select-bg};
+  --color-admin-primary-select-border: #{$color-admin-dark-primary-select-border};
+  --color-admin-primary-select-border-hover: #{$color-admin-dark-primary-select-border-hover};
+  --color-admin-primary-select-label: #{$color-admin-dark-primary-select-label};
+  --color-admin-primary-select-text: #{$color-admin-dark-primary-select-text};
+  --color-admin-primary-select-text-hover: #{$color-admin-dark-primary-select-text-hover};
+  --color-admin-primary-select-placeholder: #{$color-admin-dark-primary-select-placeholder};
+
+  --color-admin-secondary-select-bg: #{$color-admin-dark-secondary-select-bg};
+  --color-admin-secondary-select-border: #{$color-admin-dark-secondary-select-border};
+  --color-admin-secondary-select-border-hover: #{$color-admin-dark-secondary-select-border-hover};
+  --color-admin-secondary-select-label: #{$color-admin-dark-secondary-select-label};
+  --color-admin-secondary-select-text: #{$color-admin-dark-secondary-select-text};
+  --color-admin-secondary-select-text-hover: #{$color-admin-dark-secondary-select-text-hover};
+  --color-admin-secondary-select-placeholder: #{$color-admin-dark-secondary-select-placeholder};
+
+  // Select Items colors
+  --color-admin-primary-select-item-text: #{$color-admin-dark-primary-select-item-text};
+  --color-admin-primary-select-item-bg: #{$color-admin-dark-primary-select-item-bg};
+  --color-admin-primary-select-item-bg-hover: #{$color-admin-dark-primary-select-item-bg-hover};
+  --color-admin-primary-select-item-bg-selected: #{$color-admin-dark-primary-select-item-bg-selected};
+  --color-admin-primary-select-item-text-selected: #{$color-admin-dark-primary-select-item-text-selected};
+
+  --color-admin-secondary-select-item-text: #{$color-admin-dark-secondary-select-item-text};
+  --color-admin-secondary-select-item-bg: #{$color-admin-dark-secondary-select-item-bg};
+  --color-admin-secondary-select-item-bg-hover: #{$color-admin-dark-secondary-select-item-bg-hover};
+  --color-admin-secondary-select-item-bg-selected: #{$color-admin-dark-secondary-select-item-bg-selected};
+  --color-admin-secondary-select-item-text-selected: #{$color-admin-dark-secondary-select-item-text-selected};
+
+  // Textarea colors
+  --color-admin-primary-textarea-bg: #{$color-admin-dark-primary-textarea-bg};
+  --color-admin-primary-textarea-border: #{$color-admin-dark-primary-textarea-border};
+  --color-admin-primary-textarea-border-hover: #{$color-admin-dark-primary-textarea-border-hover};
+  --color-admin-primary-textarea-label: #{$color-admin-dark-primary-textarea-label};
+  --color-admin-primary-textarea-text: #{$color-admin-dark-primary-textarea-text};
+  --color-admin-primary-textarea-text-hover: #{$color-admin-dark-primary-textarea-text-hover};
+  --color-admin-primary-textarea-placeholder: #{$color-admin-dark-primary-textarea-placeholder};
+
+  --color-admin-secondary-textarea-bg: #{$color-admin-dark-secondary-textarea-bg};
+  --color-admin-secondary-textarea-border: #{$color-admin-dark-secondary-textarea-border};
+  --color-admin-secondary-textarea-border-hover: #{$color-admin-dark-secondary-textarea-border-hover};
+  --color-admin-secondary-textarea-label: #{$color-admin-dark-secondary-textarea-label};
+  --color-admin-secondary-textarea-text: #{$color-admin-dark-secondary-textarea-text};
+  --color-admin-secondary-textarea-text-hover: #{$color-admin-dark-secondary-textarea-text-hover};
+  --color-admin-secondary-textarea-placeholder: #{$color-admin-dark-secondary-textarea-placeholder};
+
+  // Calendar colors
+  --color-admin-primary-calendar-base-bg: #{$color-admin-dark-primary-calendar-base-bg};
+  --color-admin-primary-calendar-header-bg: #{$color-admin-dark-primary-calendar-header-bg};
+  --color-admin-primary-calendar-header-text: #{$color-admin-dark-primary-calendar-header-text};
+  --color-admin-primary-calendar-header-hover: #{$color-admin-dark-primary-calendar-header-hover};
+  --color-admin-primary-calendar-grid-header-bg: #{$color-admin-dark-primary-calendar-grid-header-bg};
+  --color-admin-primary-calendar-grid-header-text: #{$color-admin-dark-primary-calendar-grid-header-text};
+  --color-admin-primary-calendar-grid-body-bg: #{$color-admin-dark-primary-calendar-grid-body-bg};
+  --color-admin-primary-calendar-cell-hover: #{$color-admin-dark-primary-calendar-cell-hover};
+  --color-admin-primary-calendar-cell-button-hover: #{$color-admin-dark-primary-calendar-cell-button-hover};
+  --color-admin-primary-calendar-cell-selected: #{$color-admin-dark-primary-calendar-cell-selected};
+  --color-admin-primary-calendar-cell-selected-text: #{$color-admin-dark-primary-calendar-cell-selected-text};
+  --color-admin-primary-calendar-cell-selected-hover: #{$color-admin-dark-primary-calendar-cell-selected-hover};
+  --color-admin-primary-calendar-cell-focus: #{$color-admin-dark-primary-calendar-cell-focus};
+  --color-admin-primary-calendar-cell-today-bg: #{$color-admin-dark-primary-calendar-cell-today-bg};
+  --color-admin-primary-calendar-cell-today-text: #{$color-admin-dark-primary-calendar-cell-today-text};
+
+  --color-admin-secondary-calendar-base-bg: #{$color-admin-dark-secondary-calendar-base-bg};
+  --color-admin-secondary-calendar-header-bg: #{$color-admin-dark-secondary-calendar-header-bg};
+  --color-admin-secondary-calendar-header-text: #{$color-admin-dark-secondary-calendar-header-text};
+  --color-admin-secondary-calendar-header-hover: #{$color-admin-dark-secondary-calendar-header-hover};
+  --color-admin-secondary-calendar-grid-header-bg: #{$color-admin-dark-secondary-calendar-grid-header-bg};
+  --color-admin-secondary-calendar-grid-header-text: #{$color-admin-dark-secondary-calendar-grid-header-text};
+  --color-admin-secondary-calendar-grid-body-bg: #{$color-admin-dark-secondary-calendar-grid-body-bg};
+  --color-admin-secondary-calendar-cell-hover: #{$color-admin-dark-secondary-calendar-cell-hover};
+  --color-admin-secondary-calendar-cell-button-hover: #{$color-admin-dark-secondary-calendar-cell-button-hover};
+  --color-admin-secondary-calendar-cell-selected: #{$color-admin-dark-secondary-calendar-cell-selected};
+  --color-admin-secondary-calendar-cell-selected-text: #{$color-admin-dark-secondary-calendar-cell-selected-text};
+  --color-admin-secondary-calendar-cell-selected-hover: #{$color-admin-dark-secondary-calendar-cell-selected-hover};
+  --color-admin-secondary-calendar-cell-focus: #{$color-admin-dark-secondary-calendar-cell-focus};
+  --color-admin-secondary-calendar-cell-today-bg: #{$color-admin-dark-secondary-calendar-cell-today-bg};
+  --color-admin-secondary-calendar-cell-today-text: #{$color-admin-dark-secondary-calendar-cell-today-text};
+}

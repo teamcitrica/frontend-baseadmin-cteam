@@ -21,8 +21,6 @@ $break-tablet: 610px;
 $break-desktop: 1190px;
 
 
-
-
 @mixin media-to-up($mq) {
     @media (min-width: $mq) {
         @content;

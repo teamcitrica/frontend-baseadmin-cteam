@@ -1,35 +1,20 @@
 
 $select-citrica-ui: (
   sm: (
-    padding: 10px 20px,
+    padding: 10px 0px,
   ),
   md: (
-    padding: 10px 20px,
+    padding: 10px 0px,
   ),
   lg: (
-    padding: 20px 50px,
+    padding: 10px 0px,
   )
 );
 
 .select-citrica-ui{
-  min-width: 140px !important;
-  max-width: 380px !important;
+  // min-width: 140px !important;
+  // max-width: 380px !important;
   @include a-set($select-citrica-ui);
-  
-  &[data-slot="base"] {
-    min-width: 140px !important;
-    max-width: 380px !important;
-  }
-  
-  [data-slot="trigger"] {
-    min-width: 140px !important;
-    max-width: 380px !important;
-  }
-  
-  [data-slot="mainWrapper"] {
-    min-width: 140px !important;
-    max-width: 380px !important;
-  }
 }
 .select-item-citrica-ui{
   border-radius: var(--form-radius-select); // border radius

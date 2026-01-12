@@ -1,4 +1,3 @@
-
 $btn-citrica-ui: (
   sm: (
     padding: 10px 20px,
@@ -13,14 +12,6 @@ $btn-citrica-ui: (
 .btn-citrica-ui{
   border-radius: var(--form-radius-btn);
   min-width: 140px;
-  max-width: 380px;
-  &:hover, &:active, &:focus { // AVOID DEFAULT OPACITY CHANGE
-    opacity: 1 !important;
-    border-color: inherit !important;
-    filter: none !important;
-    transform: none !important;
-    box-shadow: inherit !important;
-  }
   @include a-set($btn-citrica-ui);
 }
 
@@ -54,6 +45,59 @@ $btn-citrica-ui: (
     background-color: var(--color-flat-btn-hover);
     .text-component {
       color: var(--color-flat-btn-text-hover) !important;
+    }
+  }
+}
+
+// ADMIN BUTTONS
+$btn-citrica-ui-admin: (
+  sm: (
+    padding: 8px 14px,
+  ),
+  md: (
+    padding: 8px 14px,
+  ),
+  lg: (
+    padding: 10px 30px,
+  )
+);
+.btn-citrica-ui-admin{
+  border-radius: var(--form-admin-radius-btn);
+  min-width: 140px;
+  @include a-set($btn-citrica-ui-admin);
+}
+
+.btn-primary-admin{
+  background-color: var(--color-admin-primary-btn);
+  color: var(--color-admin-primary-btn-text);
+  border: none;
+  &:hover{
+    background-color: var(--color-admin-primary-btn-hover);
+    .text-component {
+      color: var(--color-admin-primary-btn-text-hover) !important;
+    }
+  }
+}
+.btn-secondary-admin{
+  background-color: var(--color-admin-secondary-btn);
+  color: var(--color-admin-secondary-btn-text);
+  border: 1px solid var(--color-admin-secondary-btn-border);
+  &:hover{
+    background-color: var(--color-admin-secondary-btn-hover);
+    border-color: var(--color-admin-secondary-btn-border-hover);
+    .text-component {
+      color: var(--color-admin-secondary-btn-text-hover) !important;
+    }
+  }
+}
+.btn-flat-admin{
+  background-color: transparent;
+  color: var(--color-admin-flat-btn-text);
+  border: none;
+  &:hover{
+    background-color: var(--color-admin-flat-btn-hover);
+    .text-component {
+      color: var(--color-admin-flat-btn-text-hover) !important;
     }
   }
 }

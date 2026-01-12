@@ -13,11 +13,12 @@ frontend-base-admin-cteam is a Next.js 15 base administration application built 
 
 ## Architecture & Key Technologies
 - **Framework**: Next.js 15 with App Router architecture
-- **UI Library**: HeroUI v2 (custom UI components)
-- **Styling**: SCSS with custom design tokens + Tailwind CSS
+- **UI Library**: HeroUI v2 + citrica-ui-toolkit v0.0.10 (custom component library)
+- **Styling**: SCSS with Citrica Design System + Tailwind CSS 3.4
 - **Database**: Supabase (with React hooks integration)
 - **State Management**: React Context for auth/cart, custom hooks for data fetching
 - **Theme**: next-themes for light/dark mode with HeroUI provider
+- **Icons**: Lucide React icons
 
 ## Component Architecture
 The app uses a structured atomic design pattern:
@@ -51,10 +52,64 @@ Multi-variant header component with optional button functionality:
 - Uses siteConfig.navLinks for navigation items
 - Smooth scroll to sections functionality
 
-### Custom Styling System
-- SCSS files organized in numbered folders (01-settings to 11-atomic-design)
-- Custom text tokens and design system variables
-- Responsive breakpoints using custom Col/Container components (`@citrica/objects`)
+### Citrica UI Toolkit (citrica-ui-toolkit v0.0.10)
+Custom component library built on top of HeroUI with Citrica design tokens.
+
+**Available Components:**
+- **Button**: Customizable button with variants (primary, secondary, flat, success, warning, danger) and admin mode support
+- **Input**: Text input with icon support, multiple variants (primary, secondary), and form validation
+- **Select**: Dropdown select with custom styling, icon support, and option rendering
+- **Text**: Typography component with responsive variants (display, headline, title, subtitle, body, label)
+- **Icon**: Lucide icon wrapper with size and color props
+- **Card**: Card component with header/footer support
+- **Textarea**: Multi-line text input with character limits
+- **Modal**: Modal dialog with customizable size and placement
+- **Carousel**: Swiper-based carousel with autoplay and pagination
+
+**Usage Example:**
+```tsx
+import { Button, Input, Select, Text } from 'citrica-ui-toolkit';
+
+<Button variant="primary" label="Save" onPress={handleSave} />
+<Input variant="primary" label="Email" type="email" startIcon="Mail" />
+<Select variant="primary" label="Country" options={countries} />
+<Text variant="headline" weight="bold">Welcome</Text>
+```
+
+### Citrica Design System (Styles Architecture)
+SCSS files organized in numbered folders following ITCSS methodology:
+
+1. **01-settings**: Global variables, colors, fonts, mixins
+   - `colors/` - Light/dark theme color tokens
+   - `colors-admin/` - Admin-specific color tokens
+   - `settings.scss` - Grid system, typography, responsive variables
+   - `mixins.scss` - Responsive mixins and utilities
+
+2. **02-tools**: SCSS functions and tools
+3. **03-external**: External library overrides
+4. **04-generic**: Reset and normalize styles
+5. **05-tags**: HTML tag defaults
+6. **06-keyframes**: Animation keyframes
+7. **07-objects**: Layout objects (grid, containers)
+8. **08-components**: Component-specific styles
+9. **09-utilities**: Utility classes
+10. **10-tokens**: Design tokens for components
+    - `button-tokens.scss` - Button variants and states
+    - `input-tokens.scss` - Input field styling
+    - `select-tokens.scss` - Select dropdown styling
+    - `textarea-tokens.scss` - Textarea styling
+    - `text-tokens.scss` - Typography tokens
+    - `calendar-tokens.scss` - Calendar component tokens
+    - `form-tokens.scss` - Form-wide tokens
+    - `login-tokens.scss` - Login-specific tokens
+11. **11-atomic-design**: Atomic design components
+12. **custom.scss**: Project-specific custom styles
+
+**Design Token System:**
+- Supports both regular and admin variants for all components
+- CSS variables for dynamic theming
+- Responsive typography and spacing scales
+- Color tokens following Material Design naming (primary, secondary, tertiary, etc.)
 
 ## Key Features & Patterns
 - **Responsive Navbar**: Auto-changing colors on scroll, mobile drawer menu

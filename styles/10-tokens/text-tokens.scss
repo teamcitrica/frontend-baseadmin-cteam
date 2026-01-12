@@ -16,8 +16,8 @@ $display-responsive: (
   )
 );
 .text-display {
-  font-family: var(--font-family-a);
-  font-weight: 500;
+  font-family: var(--font-family-d);
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -47,8 +47,8 @@ $headline-responsive: (
   )
 );
 .text-headline {
-  font-family: var(--font-family-a);
-  font-weight: 500;
+  font-family: var(--font-family-d);
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -78,8 +78,8 @@ $body-big-responsive: (
   )
 );
 .text-body-big {
-  font-family: var(--font-family-a);
-  font-weight: 500;
+  font-family: var(--font-family-d);
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -109,7 +109,7 @@ $title-responsive: (
 );
 .text-title {
   font-family: var(--font-family-b);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -139,8 +139,8 @@ $subtitle-responsive: (
   )
 );
 .text-subtitle {
-  font-family: var(--font-family-a);
-  font-weight: 500;
+  font-family: var(--font-family-d);
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -169,8 +169,8 @@ $body-responsive: (
   )
 );
 .text-body {
-  font-family: var(--font-family-a);
-  font-weight: 500;
+  font-family: var(--font-family-d);
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -200,7 +200,7 @@ $label-responsive: (
 );
 .text-label {
   font-family: var(--font-family-c);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
@@ -218,5 +218,230 @@ $label-responsive: (
   color: var(--text-default-color);
 }
 .text-black-color{
-  color: var(--color-black);
+  color: var(--color-text-black);
+}
+
+// :::::::::::::::::  ADMIN TEXT COLORS ::::::::::::::::::::::::::::::
+
+// TEXT TOKEN: Typography
+
+// DISPLAY
+$display-responsive-admin: (
+   sm: (
+    font-size: 36px,
+    line-height: 40px
+  ),
+  md: (
+    font-size: 40px,
+    line-height: 48px
+  ),
+  lg: (
+    font-size: 40px,
+    line-height: 48px
+  )
+);
+.text-display-admin {
+  font-family: var(--font-family-d);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($display-responsive-admin);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 300;
+  }
+}
+
+// HEADLINE
+$headline-responsive-admin: (
+  sm: (
+    font-size: 28px,
+    line-height: 36px
+  ),
+  md: (
+    font-size: 32px,
+    line-height: 40px
+  ),
+  lg: (
+    font-size: 32px,
+    line-height: 40px
+ 
+  )
+);
+.text-headline-admin {
+  font-family: var(--font-family-d);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($headline-responsive-admin);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 300;
+  }
+}
+
+//custom
+$body-big-responsive-admin: (
+  sm: (
+    font-size: 32px,
+    line-height: 32px
+  ),
+  md: (
+    font-size: 36px,
+    line-height: 36px
+  ),
+  lg: (
+    font-size: 40px,
+    line-height: 40px
+ 
+  )
+);
+.text-body-big-admin {
+  font-family: var(--font-family-d);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($body-big-responsive-admin);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 300;
+  }
+}
+
+// TITLE
+$title-responsive-admin: (
+  sm: (
+    font-size: 22px,
+    line-height: 28px
+  ),
+  md: (
+    font-size: 25px,
+    line-height: 32px
+  ),
+  lg: (
+    font-size: 25px,
+    line-height: 32px
+  )
+);
+.text-title-admin {
+  font-family: var(--font-family-b);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($title-responsive-admin);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 300;
+  }
+}
+
+// SUBTITLE
+$subtitle-responsive-admin: (
+  sm: (
+    font-size: 18px,
+    line-height: 24px
+  ),
+  md: (
+    font-size: 20px,
+    line-height: 28px
+  ),
+  lg: (
+    font-size: 20px,
+    line-height: 28px
+
+  )
+);
+.text-subtitle-admin {
+  font-family: var(--font-family-d);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($subtitle-responsive-admin);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 300;
+  }
+}
+
+// BODY
+$body-responsive-admin: (
+  sm: (
+    font-size: 14px,
+    line-height: 20px
+  ),
+  md: (
+    font-size: 16px,
+    line-height: 24px
+  ),
+  lg: (
+    font-size: 16px,
+    line-height: 24px
+  )
+);
+.text-body-admin {
+  font-family: var(--font-family-d);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($body-responsive-admin);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 300;
+  }
+}
+
+// LABEL
+$label-responsive-admin: (
+  sm: (
+    font-size: 11px,
+    line-height: 16px
+  ),
+  md: (
+    font-size: 13px,
+    line-height: 20px
+  ),
+  lg: (
+    font-size: 13px,
+    line-height: 20px
+  )
+);
+.text-label-admin {
+  font-family: var(--font-family-c);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($label-responsive-admin);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 300;
+  }
+}
+
+// Default color
+.text-default-color {
+  color: var(--text-default-color-admin);
+}
+.text-black-color{
+  color: var(--color-text-black-admin);
 }

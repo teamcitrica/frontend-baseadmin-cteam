@@ -2,10 +2,10 @@
 import React from 'react'
 import { Container, Col } from '@/styles/07-objects/objects';
 import Icon from '@ui/atoms/icon';
-import { Button, Text, Sidebar, Input, Select } from '@citrica-ui';
+import { Button, Text, Sidebar,  Select } from '@citrica-ui';
 import { useTheme } from "next-themes";
 import { addToast } from "@heroui/toast";
-
+import {  Input } from 'citrica-ui-toolkit'
 const SectionTypography = () => {
   const { theme, setTheme } = useTheme();
   return (
@@ -47,15 +47,33 @@ const SectionTypography = () => {
                 });
               }}
               label="New Toast Test"
-              variant="secondary" />
+              variant="primary" />
           </div>
         </Col>
-        <div className=''>
+        <div className='flex flex-col gap-4 mb-6'>
+          <p className="text-lg font-bold">Inputs con Citrica Design System:</p>
+
           <Input
-            label='nombre'
-            placeholder='escribe tu nombre aqui'
+            label='Nombre completo'
+            placeholder='Escribe tu nombre aquí'
             variant='primary'
-            size='lg'
+          />
+
+          <Input
+            label="Correo electrónico"
+            placeholder="tu@email.com"
+            type="email"
+            variant="secondary"
+            startIcon="Mail"
+            required
+          />
+
+          <Input
+            label="Teléfono"
+            placeholder="+51 999 999 999"
+            type="tel"
+            variant="primary"
+            startIcon="Phone"
           />
         </div>
         <div>
